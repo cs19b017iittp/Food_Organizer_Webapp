@@ -5,17 +5,18 @@ import Home from './Home';
 import Profile from './Profile';
 import calo from './Calorie';
 import Navbar from './components/Navbar'
+import Login_Signup from './components/Login_Signup';
 function App() {
   return (
     <Router>
-    <div className="App">
-      {/* <header className="App-header"> */}
-        {/* <img src={logo} className="App-logo" alt="logo" />
+    <div classNameName="App">
+      {/* <header classNameName="App-header"> */}
+        {/* <img src={logo} classNameName="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          classNameName="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -25,19 +26,21 @@ function App() {
   <body>
     <Navbar/>
 <br/>
-    {/* <Link className="home" to="/home">Home_page</Link> */}
+    {/* <Link classNameName="home" to="/home">Home_page</Link> */}
     <Route path="/home" component={Home}/>
 
-    {/* <Link className="profile" to="/profile">Profile_page</Link> */}
+    {/* <Link classNameName="profile" to="/profile">Profile_page</Link> */}
     <Route path="/profile" component={Profile}/>
 
-    {/* <Link  className="calorie"to="/calorie">Calorie_page</Link> */}
+    {/* <Link  classNameName="calorie"to="/calorie">Calorie_page</Link> */}
     <Route path="/calorie" component={calo}/>
     </body>
    {/* <Home/> */}
    
       {/* </header> */}
     </div>
+    <Login_Signup />
+
     </Router>
   );
 }
