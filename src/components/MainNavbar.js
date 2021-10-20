@@ -1,20 +1,19 @@
 import React from 'react'
 
-export default function Navbar() {
+export default function MainNavbar() {
     return (
         <>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <a className="navbar-brand" href="./LoginSignup">Navbar</a>
+            <a className="navbar-brand active" href="./LoginSignup">Navbar</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav">
-                <a className="nav-link active" aria-current="page" href="./Home">Home</a>
-                <a className="nav-link" href="./Profile">Profile</a>
-                <a className="nav-link" href="./Calorie">Calorie</a>
-                <a className="nav-link disabled" href="/">Disabled</a>
+              {/* <a className="nav-link active" aria-current="page" href="./LoginSignup">Home</a> */}
+                <a className="nav-link" href="./Login">Login</a>
+                <a className="nav-link" href="./SignUp">SignUp</a>
               </div>
             </div>
           </div>
