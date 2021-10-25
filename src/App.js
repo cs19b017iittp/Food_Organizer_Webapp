@@ -8,6 +8,7 @@ import Login from './components/Login';
 import Main from './components/Main';
 import LoginSignup from './components/LoginSignup';
 import SignUp from './components/SignUp';
+// import { LoginPage } from './components/loginPage';
 
 
 function App() {
