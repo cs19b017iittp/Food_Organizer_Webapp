@@ -1,8 +1,10 @@
 import React from 'react'
+import Navbar from './components/Navbar'
 import './Home.css'
 export default function Home() {
   return (
     <>
+      <Navbar/>
       <h1>This is home page</h1>
       <h1>home page</h1>
       <button type="button" className="btn btn-dark" >Dark</button>

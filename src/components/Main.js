@@ -1,24 +1,21 @@
 import React from 'react';
-import {BrowserRouter as Router,Route} from "react-router-dom";
-import Login from './Login';
-import LoginSignup from './LoginSignup';
-import MainNavbar from './MainNavbar';
-import SignUp from './SignUp';
+import Home from '../Home';
+import Navbar from './Navbar';
 
 
 function Main(){
+    
     return (
-        <Router>
-            <div className="Main">
-                <body>
-                    <MainNavbar/>
-                        <br/>
-                        <Route path="/loginsignup" component={LoginSignup}/>
-                        <Route path="/login" component={Login}/>
-                        <Route path="/signup" component={SignUp}/>
-                </body> 
-            </div>
-        </Router>
+        <>
+        {/* <Router> */}
+            <Home/>
+            {/* <Switch>
+            <Route path="/home" component={Home} exact/>
+            <Route path="/profile" component={Profile} exact/>
+            <Route path="/calorie" component={Calorie} exact/>
+            </Switch> */}
+        {/* </Router> */}
+        </>
     );
 }
 export default Main;
