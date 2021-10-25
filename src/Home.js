@@ -37,7 +37,7 @@ export default function Home() {
 
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action list-group-item-primary"
               href="#Vegetables"
             >
               Vegetables
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action list-group-item-secondary"
               href="#Milk Products"
             >
               Milk-Products
@@ -53,7 +53,7 @@ export default function Home() {
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action list-group-item-success"
               href="#Spices"
             >
               Spices
@@ -61,7 +61,7 @@ export default function Home() {
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action list-group-item-danger"
               href="#Leafy Vegetables"
             >
               Leafy-Vegetables
@@ -69,20 +69,20 @@ export default function Home() {
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action "
               href="#Flours"
             >
               Flours
             </a>
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
-            <a className="list-group-item list-group-item-action" href="#Rice">
+            <a className="list-group-item list-group-item-action list-group-item-warning" href="#Rice">
               Rice
             </a>
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action list-group-item-info"
               href="#Grains"
             >
               Grains

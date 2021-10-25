@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 export default function Calorie() {
   return (
     <>
+    <Navbar />
       <div>
         <h1>this is calorie page</h1>
         <div class="mb-3">
