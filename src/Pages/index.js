@@ -4,10 +4,9 @@ import InfoSection from '../components/InfoSection';
 import { homeObjOne, homeObjThree, homeObjTwo } from '../components/InfoSection/Data';
 import Info from '../components/MainSection';
 import Navbar from '../components/Navbar/Navbar';
-// import Navbar1 from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 
-
+// this is page when we open the website
 const HomePage = () =>{
     const [isOpen,setIsOpen] = useState(false)
 

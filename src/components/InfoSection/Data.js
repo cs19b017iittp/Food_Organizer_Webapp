@@ -7,9 +7,9 @@ export const homeObjOne = {
     lightText: true,
     lightTextDesc: true,
     topLine: 'Food Oraganizer',
-    headline: 'Unlimited Transactions with zero fees',
-    description: `Get access to our exclusive app that allows you to send unlimited 
-    transactions without getting charged any fees`,
+    headline: 'Reduce food waste',
+    description: `Using this web application a normal person can keep track of their inventory so that he can
+     get an overview of what to buy in the next month so as to reduce the wastage indirectly implies in money saving`,
     buttonLabel: 'Get started',
     imgStart: false,
     img: img1,
@@ -25,9 +25,8 @@ export const homeObjTwo = {
     lightText: false,
     lightTextDesc: false,
     topLine: 'Contact us',
-    headline: 'Unlimited Transactions with zero fees',
-    description: `Get access to our exclusive app that allows you to send unlimited 
-    transactions without getting charged any fees`,
+    headline: 'Write to us Any time',
+    description: `Feel Free to share your Feedback and difficulties`,
     buttonLabel: 'Contact us',
     imgStart: true,
     img: img2,

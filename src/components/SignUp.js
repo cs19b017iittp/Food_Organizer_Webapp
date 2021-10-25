@@ -1,21 +1,8 @@
 import React,{Component} from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
+// Signup page
 
-
-
-// export default function SignUp(){
-    
-//     return(<div>
-//             <h2 className="text-2xl my-3">This is SignUp</h2>
-//             <div className="flex my-3">
-//                 <SingleImage title="Apple" desc="A red color fruit"/>
-//                 <SingleImage title="Mango" desc="A yellow color fruit"/>
-//                 <button onClick={change}>Click</button>
-//             </div>  
-//         </div>
-//     );
-// }
 
 var cnt = 0;
 class SignUp extends Component {
@@ -59,16 +46,9 @@ class SignUp extends Component {
                         smooth={true} duration={500} spy={true} exact='true' offset={-80}>
                             Enter
                         </Button>
-                <Link to="/login">Already a user ?</Link>
+                <Link to="/loginpage">Already a user ?</Link>
             </div>
-        // <div>
-        //     <h2 className="text-2xl my-3">{this.state.tag}</h2>
-        //     <div className="flex my-3">
-        //         <SingleImage title={this.state.imgs[0].title} desc={this.state.imgs[0].desc}/>
-        //         <SingleImage title={this.state.imgs[1].title} desc={this.state.imgs[1].desc}/>
-        //         <button type='button' onClick={this.changeTag}>Click</button>
-        //     </div>  
-        // </div>
+
     );
     }
 }
