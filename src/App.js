@@ -8,6 +8,12 @@ import Login from './components/Login';
 import Main from './components/Main';
 import LoginSignup from './components/LoginSignup';
 import SignUp from './components/SignUp';
+import Fruits from './components/Fruits';
+import Vegetables from './components/Vegetables';
+import MilkProducts from './components/MilkProducts';
+import LeafyVegetables from './LeafyVegetables';
+import Grains from './Grains';
+
 
 
 function App() {
@@ -25,6 +31,12 @@ function App() {
       <Route path="/home" component={Home} exact/>
       <Route path="/profile" component={Profile} exact/>
       <Route path="/calorie" component={Calo} exact/>
+      
+      <Route path="/fruits" component={Fruits}/>
+      <Route path="/vegetables" component={Vegetables}/>
+      <Route path="/MilkProducts" component={MilkProducts}/>
+      <Route path="/LeafyVegetables" component={LeafyVegetables}/>
+      <Route path="/Grains" component={Grains}/>
     {/* </Switch> */}
     </Router>
   );
