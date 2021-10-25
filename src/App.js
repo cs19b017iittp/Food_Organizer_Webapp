@@ -13,6 +13,8 @@ import Vegetables from './components/Vegetables';
 import MilkProducts from './components/MilkProducts';
 import LeafyVegetables from './LeafyVegetables';
 import Grains from './Grains';
+import { LoginPage } from './components/LoginNew';
+// import { LoginPage } from 'c:/users/hp/downloads/loginnew';
 
 
 
@@ -21,7 +23,7 @@ function App() {
     <Router>
     <Switch>
       <Route path="/" component={HomePage} exact/>
-      <Route path="/login" component={Login } exact/>
+      <Route path="/loginpage" component={LoginPage } exact/>
       <Route path="/main" component={Main} exact/>
       <Route path="/signup" component={SignUp} exact/>
     </Switch>

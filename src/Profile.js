@@ -7,6 +7,7 @@ export default function Profile() {
 
     return (
         <>
+        <Navbar />
             <div>
                 <h1> this is profile page</h1>
                 <div class="mb-3">
