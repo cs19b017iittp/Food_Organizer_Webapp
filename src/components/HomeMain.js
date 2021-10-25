@@ -1,73 +1,63 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Route } from 'react-router-dom';
+import Login from './Login';
+import LoginSignup from './LoginSignup';
+import MainNavbar from './MainNavbar';
+import Navbar from '../components/Navbar';
+import SignUp from './SignUp';
+import HomePage from '../Pages';
 
 class HomeMain extends Component {
     render() { 
         return (
             <>
-      <div className="row">
-        <div className="col-lg-5 col-md-11">
-          <form action="">
-              
-          </form>
-        </div>
-        <div className="col-lg-7 col-md-11">
-          <div
-            id="carouselExampleControls"
-            className="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img
-                  src="https://minnetonkaorchards.com/wp-content/uploads/2021/04/Bright-Red-Apple.jpg"
-                  className="d-block w-100"
-                  alt="..."
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  src="https://minnetonkaorchards.com/wp-content/uploads/2021/04/Bright-Red-Apple.jpg"
-                  className="d-block w-100"
-                  alt="..."
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  src="https://minnetonkaorchards.com/wp-content/uploads/2021/04/Bright-Red-Apple.jpg"
-                  className="d-block w-100"
-                  alt="..."
-                />
-              </div>
-            </div>
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleControls"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleControls"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
+            <HomePage/>
+        {/* <Router>
+            <div className="Main">
+                
+                <body>
+                <MainNavbar/>
+                        <br/>
+                        <Route path="/home" component={LoginSignup}/>
+                        <Route path="/signup" component={SignUp}/>
+                </body>  
+            </div> 
+         </Router> */}
+        
+        
+        </>
         );
     }
 }
 export default HomeMain;
+
+// import React,{useState} from 'react';
+// import Navbar from '../components/Navbar/Navbar';
+// import Footer from './Footer';
+// import InfoSection from './InfoSection';
+// import { homeObjOne, homeObjThree, homeObjTwo } from './InfoSection/Data';
+// import Info from './MainSection';
+// import Sidebar from './Sidebar';
+
+
+
+// const HomeMain = () =>{
+//     const [isOpen,setIsOpen] = useState(false)
+
+//     const toggle = () => {
+//         setIsOpen(!isOpen)
+//     }
+
+//     return(
+//         <>
+//             <Sidebar isOpen={isOpen} toggle={toggle}/>
+//             <Navbar toggle={toggle}/>
+//             <Info/>
+//             <InfoSection {...homeObjOne}/>
+//             <InfoSection {...homeObjTwo}/>
+//             <InfoSection {...homeObjThree}/>
+//             <Footer/>
+//         </>
+//     );
+// } 
+// export default HomeMain

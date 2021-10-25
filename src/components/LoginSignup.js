@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 export default function LoginSignup() {
   return (
     <>
+    <Navbar/>
       <div className="row">
         <div className="col-lg-5 col-md-11">
           <h1>Login</h1>

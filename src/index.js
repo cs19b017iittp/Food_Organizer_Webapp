@@ -4,12 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import LoginSignup from './components/LoginSignup';
 import Main from './components/Main';
+import App from './App';
 
 
 ReactDOM.render(
   <div>
-    <Main/>
-    {/* <App /> */}
+    {/* <Main/> */}
+    <App />
     </div>,
   document.getElementById('root')
 );

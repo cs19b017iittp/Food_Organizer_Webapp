@@ -1,26 +1,31 @@
 import './App.css';
-import {BrowserRouter as Router,Route} from "react-router-dom";
+import {BrowserRouter as Router,Route,Switch} from "react-router-dom";
 import Home from './Home';
 import Profile from './Profile';
-import calo from './Calorie';
-import Navbar from './components/Navbar'
+import Calo from './Calorie';
+import HomePage from './Pages';
+import Login from './components/Login';
+import Main from './components/Main';
+import LoginSignup from './components/LoginSignup';
+import SignUp from './components/SignUp';
+
+
 function App() {
   return (
     <Router>
-    <div classNameName="App">
-  <body>
-    <Navbar/>
-<br/>
-    {/* <Link classNameName="home" to="/home">Home_page</Link> */}
-    <Route path="/home" component={Home}/>
-
-    {/* <Link classNameName="profile" to="/profile">Profile_page</Link> */}
-    <Route path="/profile" component={Profile}/>
-
-    {/* <Link  classNameName="calorie"to="/calorie">Calorie_page</Link> */}
-    <Route path="/calorie" component={calo}/>
-    </body>
-    </div>
+    <Switch>
+      <Route path="/" component={HomePage} exact/>
+      <Route path="/login" component={Login } exact/>
+      <Route path="/main" component={Main} exact/>
+      <Route path="/signup" component={SignUp} exact/>
+    </Switch>
+      {/* <Navbar/> */}
+    {/* <Switch> */}
+      <Route path="/loginsignup" component={LoginSignup}/>
+      <Route path="/home" component={Home} exact/>
+      <Route path="/profile" component={Profile} exact/>
+      <Route path="/calorie" component={Calo} exact/>
+    {/* </Switch> */}
     </Router>
   );
 }
