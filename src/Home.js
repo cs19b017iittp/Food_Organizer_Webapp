@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { Img, ImgWrap } from "./components/InfoSection/InfoElements";
-import { HomeContainer } from "./components/MainSection/InfoItems";
+
 import { Link } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Aos from "aos";

@@ -6,7 +6,7 @@ import Calo from './Calorie';
 import HomePage from './Pages';
 import Login from './components/Login';
 import Main from './components/Main';
-import LoginSignup from './components/LoginSignup';
+import Carousel from './components/Carousel';
 import SignUp from './components/SignUp';
 
 import Fruits from './components/Fruits';
@@ -14,8 +14,8 @@ import Vegetables from './components/Vegetables';
 import MilkProducts from './components/MilkProducts';
 import LeafyVegetables from './LeafyVegetables';
 import Grains from './Grains';
-import { LoginPage } from './components/LoginNew';
-// import { LoginPage } from 'c:/users/hp/downloads/loginnew';
+import { LoginPage } from './components/loginPage/loginNew';
+
 
 
 
@@ -31,7 +31,7 @@ function App() {
     </Switch>
       {/* <Navbar/> */}
     {/* <Switch> */}
-      <Route path="/loginsignup" component={LoginSignup}/>
+      <Route path="/carousel" component={Carousel }/>
       <Route path="/home" component={Home} exact/>
       <Route path="/profile" component={Profile} exact/>
       <Route path="/calorie" component={Calo} exact/>

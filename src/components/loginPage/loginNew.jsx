@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import loginimg from "../../images/loginimg.jpg"
-import "./style.scss";
+import "./style.css";
 
 export class LoginPage extends React.Component{
 
@@ -10,7 +11,7 @@ export class LoginPage extends React.Component{
 
     render(){
         return <div className="base-Container">
-            <div className="header">Login</div>
+            <div className="h"><h2>LOGIN</h2></div>
             <div className="content">
                 <div className="image">
                     <img src={loginimg} alt="image" />
@@ -27,7 +28,8 @@ export class LoginPage extends React.Component{
                 </div>
             </div>
             <div className="footer">
-                <button type="button" className="btn">Login</button>
+                {/* <button type="button" className="btn">Login</button> */}
+                <Link to="/main" className="btn btn-primary">LOGIN</Link>
 
             </div>
         </div>
