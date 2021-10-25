@@ -10,7 +10,9 @@ export default function Calorie() {
   // setuser("pavan");
   return (
     <>
-    <Navbar></Navbar>
+
+    <Navbar />
+
       <div>
         <h1>this is calorie page - {user}</h1>
         <div class="mb-3">

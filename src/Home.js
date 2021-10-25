@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import "./Home.css";
 import "./Boxes.css";
 import Footer from "./components/Footer";
+
 export default function Home() {
   useEffect(() => {
     Aos.init({ duration: 2000 }); // animation with a duration of 2secs
@@ -37,7 +38,7 @@ export default function Home() {
 
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action list-group-item-primary"
               href="#Vegetables"
             >
               Vegetables
@@ -45,7 +46,7 @@ export default function Home() {
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action list-group-item-secondary"
               href="#Milk Products"
             >
               Milk-Products
@@ -53,7 +54,7 @@ export default function Home() {
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action list-group-item-success"
               href="#Spices"
             >
               Spices
@@ -61,7 +62,7 @@ export default function Home() {
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action list-group-item-danger"
               href="#Leafy Vegetables"
             >
               Leafy-Vegetables
@@ -69,20 +70,20 @@ export default function Home() {
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action "
               href="#Flours"
             >
               Flours
             </a>
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
-            <a className="list-group-item list-group-item-action" href="#Rice">
+            <a className="list-group-item list-group-item-action list-group-item-warning" href="#Rice">
               Rice
             </a>
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
             <a
-              className="list-group-item list-group-item-action"
+              className="list-group-item list-group-item-action list-group-item-info"
               href="#Grains"
             >
               Grains
@@ -119,12 +120,7 @@ export default function Home() {
                   ></img>
                   {/* <h1 className="hide">I am shown when someone hovers over the div above.</h1> */}
                   <br />
-                  <button
-                    type="button"
-                    className="btn btn-success btn_style btn_style"
-                  >
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div className="col-lg-1 col-md-4">
@@ -136,9 +132,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-1 col-md-4">
@@ -150,9 +144,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-1 col-md-4">
@@ -164,9 +156,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-1 col-md-4">
@@ -178,9 +168,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-1 col-md-4">
@@ -192,9 +180,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-1 col-md-4">
@@ -206,9 +192,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-1 col-md-4">
@@ -220,9 +204,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-1 col-md-4">
@@ -234,9 +216,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-1 col-md-4">
@@ -248,9 +228,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-1 col-md-4">
@@ -262,9 +240,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
 
@@ -280,9 +256,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-4">
@@ -294,9 +268,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-4">
@@ -308,9 +280,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-4">
@@ -322,9 +292,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-4">
@@ -336,9 +304,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-4">
@@ -350,9 +316,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
             </div>
@@ -376,9 +340,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-4">
@@ -390,9 +352,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-4">
@@ -404,9 +364,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-4">
@@ -418,9 +376,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-4">
@@ -432,9 +388,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
               <div class="col-lg-2 col-md-4">
@@ -446,9 +400,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
             </div>
@@ -466,9 +418,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
             </div>
@@ -488,9 +438,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
             </div>
@@ -510,9 +458,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
             </div>
@@ -530,9 +476,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
             </div>
@@ -551,9 +495,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
             </div>
@@ -571,9 +513,7 @@ export default function Home() {
                     alt="..."
                   ></img>
                   <br />
-                  <button type="button" className="btn btn-success btn_style">
-                    +
-                  </button>
+                  <a class="btn btn-success" href="/Addproduct" role="button">+</a>
                 </div>
               </div>
             </div>
