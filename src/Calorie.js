@@ -1,12 +1,13 @@
 import React ,{useState} from 'react'
 
 import Navbar from './components/Navbar'
- 
+import './Profile.css'
 export default function Calorie() {
   const [user, setuser] = useState("initial");
   const handleclick=()=>{
     setuser("pavan");
   }
+
   // setuser("pavan");
   return (
     <>
@@ -15,8 +16,8 @@ export default function Calorie() {
 
       <div>
         <h1>this is calorie page - {user}</h1>
-        <div class="mb-3">
-
+        <div class="mb-3 ">
+          
           <label htmlFor="exampleformControlTextarea1" className="form-label">Weight in kgs</label>
           <textarea className="form-control" value={user}  id="exampleFormControlTextarea1" rows="1"></textarea>
           <label htmlFor="exampleformControlTextarea2" className="form-label">Height in cm</label>

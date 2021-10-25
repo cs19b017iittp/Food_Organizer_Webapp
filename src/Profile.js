@@ -8,7 +8,7 @@ export default function Profile() {
     return (
         <>
             <Navbar />
-            <div>
+            <div className="profilepage">
                 <h1> this is profile page</h1>
                 <div className="mb-3 row">
                     <label htmlFor="inputtext" className="col-sm-2 col-form-label">Name</label>
