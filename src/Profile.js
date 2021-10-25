@@ -1,8 +1,9 @@
 
 import React from 'react'
 import Navbar from './components/Navbar'
-
 import './Profile.css'
+
+//Profile page shows user details
 export default function Profile() {
 
     return (

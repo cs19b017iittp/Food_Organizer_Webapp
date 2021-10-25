@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import loginimg from "../../images/loginimg.jpg"
 import "./style.css";
-
+// login page contains inputs of email and password
 export class LoginPage extends React.Component{
 
     constructor(props){

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-
 import { Link } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Aos from "aos";
@@ -8,6 +7,7 @@ import "./Home.css";
 import "./Boxes.css";
 import Footer from "./components/Footer";
 
+// shows suggestion to add items to inventory
 export default function Home() {
   useEffect(() => {
     Aos.init({ duration: 2000 }); // animation with a duration of 2secs

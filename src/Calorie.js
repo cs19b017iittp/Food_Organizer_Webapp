@@ -1,14 +1,14 @@
 import React ,{useState} from 'react'
-
 import Navbar from './components/Navbar'
 import './Profile.css'
+
+//calorie page
 export default function Calorie() {
   const [user, setuser] = useState("initial");
   const handleclick=()=>{
     setuser("pavan");
   }
 
-  // setuser("pavan");
   return (
     <>
 

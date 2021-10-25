@@ -1,5 +1,5 @@
 import React from 'react'
-
+// Which adds the house hold products to inventory
 export default function Addproduct() {
     return (
         <div>

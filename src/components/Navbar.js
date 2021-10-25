@@ -1,9 +1,8 @@
 import React from 'react'
-
+// Navigation bar for Home, Profile,Calorie,Pages
 export default function Navbar() {
     return (
         <>
-        {/* <Navbar/> */}
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             <a className="navbar-brand" href="./carousel">Navbar</a>
