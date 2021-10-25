@@ -1,15 +1,18 @@
+import img1 from "../../images/svg-1.svg"
+import img2 from "../../images/svg-2.svg"
+
 export const homeObjOne = {
     id: 'about',
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: 'Premium Bank',
+    topLine: 'Food Oraganizer',
     headline: 'Unlimited Transactions with zero fees',
     description: `Get access to our exclusive app that allows you to send unlimited 
     transactions without getting charged any fees`,
     buttonLabel: 'Get started',
     imgStart: false,
-    img: require('../../images/svg-1.svg'),
+    img: img1,
     alt: 'Image',
     dark: true,
     primary:true,
@@ -27,7 +30,7 @@ export const homeObjTwo = {
     transactions without getting charged any fees`,
     buttonLabel: 'Contact us',
     imgStart: true,
-    img: require('../../images/svg-2.svg'),
+    img: img2,
     alt: 'Contact',
     dark: false,
     primary:false,
@@ -45,7 +48,7 @@ export const homeObjThree = {
     description: `Get everything setup and ready in under 10 min. All you need to do is Add your Information and Done`,
     buttonLabel: 'Start Now',
     imgStart: false,
-    img: require('../../images/img2.png'),
+    img: img1,
     alt: 'Image',
     dark: true,
     primary:true,
