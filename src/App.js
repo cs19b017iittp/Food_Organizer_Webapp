@@ -14,9 +14,10 @@ import Vegetables from './components/Vegetables';
 import MilkProducts from './components/MilkProducts';
 import LeafyVegetables from './LeafyVegetables';
 import Grains from './Grains';
+
+import Addproduct from "./Addproduct";
+
 import { LoginPage } from './components/loginPage/loginNew';
-
-
 
 
 
@@ -41,6 +42,8 @@ function App() {
       <Route path="/MilkProducts" component={MilkProducts}/>
       <Route path="/LeafyVegetables" component={LeafyVegetables}/>
       <Route path="/Grains" component={Grains}/>
+      <Route path="/Addproduct" component={Addproduct}/>
+
     {/* </Switch> */}
     </Router>
   );
