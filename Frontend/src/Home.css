@@ -1,5 +1,5 @@
 .img-1 {
-  height: 75x;
+  height: 75px;
   width: 75px;
 }
 .container {
@@ -56,4 +56,9 @@ a:hover{
 
 .btn_more{
   margin-left: 94%;
+}
+
+.border1{
+  border-color: black;
+  border-width: 2px;
 }
