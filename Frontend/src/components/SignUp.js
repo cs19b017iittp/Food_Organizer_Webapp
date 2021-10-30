@@ -1,56 +1,47 @@
-import React,{Component} from 'react';
+import React, { Component, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
+import axios from 'axios';
 // Signup page
 
 
-var cnt = 0;
-class SignUp extends Component {
-    state={
-        imgs: [
-            {title:'Apple', desc:"A red color fruit"},
-            {title:"Mango", desc:"A Yellow color fruit"},
-        ],
-        tag: 'This is signup page',
+export default function SignUp() {
+    const addusertodatabase=()=>{
+    axios.post("http://localhost:3001/insert",{username:username,emailId:email,password:password});
     }
-    changeTag=()=>{
-        if(cnt%2===1){
-            this.setState({tag:'Hello world '+cnt});
-        }
-        else{
-            this.setState({tag:'please login first :) '+cnt});
-        }
-        cnt++;
-    }
-    render() { 
-        return(
+    const [username, setusername] = useState("")
+    const [email, setemail] = useState("")
+    const [password, setpassword] = useState(0)
+    return (
+        <>
 
             <div>
                 <label>Email</label>
-                <input type="email" required></input>
-                <br/><br/>
+                <input type="email" onChange={(event) => { setemail(event.target.value) }} required></input>
+                <br /><br />
                 <label>Username</label>
-                <input type="text" required></input>
-                <br/><br/>
+                <input type="text" onChange={(event) => { setusername(event.target.value) }} required></input>
+                <br /><br />
                 <label>Phone</label>
                 <input type="tel" required></input>
-                <br/><br/>
+                <br /><br />
                 <label>Password</label>
-                <input type="password" required></input>
-                <br/><br/>
+                <input type="password" onChange={(event) => { setpassword(event.target.value) }} required></input>
+                <br /><br />
                 <label>Confirm Password</label>
                 <input type="password" required></input>
-                <br/>
-                <Button to="/main" primary='true'
-                        dark='true'
-                        smooth={true} duration={500} spy={true} exact='true' offset={-80}>
-                            Enter
-                        </Button>
+                <br />
+                <Button to="/main"  onClick={addusertodatabase} primary='true'
+                    dark='true'
+                    smooth={true} duration={500} spy={true} exact='true' offset={-80}>
+                    Enter
+                </Button>
                 <Link to="/loginpage">Already a user ?</Link>
             </div>
-
-    );
-    }
+        </>
+    )
 }
- 
-export default SignUp;
+
+
+
+
