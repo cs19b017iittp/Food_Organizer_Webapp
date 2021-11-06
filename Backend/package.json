@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "devStart": "nodemon app.js"
+   
+    "frontend": " cd .. && cd frontend && npm start",
+    "dev": "nodemon app.js",
+    "start": "concurrently \"npm run dev\" \"npm run frontend\" "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^6.3.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^6.0.12",

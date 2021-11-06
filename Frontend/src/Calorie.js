@@ -1,32 +1,159 @@
 import React ,{useState} from 'react'
 import Navbar from './components/Navbar'
-import './Profile.css'
+import './components/Calorie/Calorie.css'
 
 //calorie page
 export default function Calorie() {
-  const [user, setuser] = useState("initial");
+  const [val, setVal] = useState(0);
+  const [bf,setBf] = useState(0);
+  const [cal,setCal] = useState(0);
+  // body fat % and lean factor
+  const bf_lean = new Map();
+  bf_lean.set(0,1)
+  bf_lean.set(1,0.95)
+  bf_lean.set(2,0.90)
+  bf_lean.set(3,0.85)
+  // const bf_lean_men = new Map();
+  // bf_lean_men.set(0,1)
+  // bf_lean_men.set(1,0.95)
+  // bf_lean_men.set(2,0.90)
+  // bf_lean_men.set(3,0.85)
+  // const bf_lean_wmen = new Map();
+  // bf_lean_wmen.set(0,1)
+  // bf_lean_wmen.set(1,0.95)
+  // bf_lean_wmen.set(2,0.90)
+  // bf_lean_wmen.set(3,0.85)
+  
   const handleclick=()=>{
-    setuser("pavan");
+    var w = document.getElementById("exampleFormControlTextarea1").value
+    var h = document.getElementById("exampleFormControlTextarea2").value
+    var activity = document.getElementById("select-activity").value;
+    var gen = document.getElementById("gender").value;
+    var age = document.getElementById("exampleFormControlTextarea7").value
+    var lean_factor = 0;
+    var gen_factor = 0;
+    var cal_per_day = 0;
+    var BMR = 0;
+    
+
+    if(isNaN(w) || isNaN(h) || w === "" || h === ""){
+      window.alert("Enter the values of weight and height.");
+      setVal(0)
+      // return
+    }
+    else if(activity === ""){
+      window.alert("Please select the value for activity");
+      setVal(0)
+      // return
+    }
+    else if(gen === ""){
+      window.alert("Please select the value for Gender");
+      setVal(0)
+      // return
+    }
+    else{
+      setVal(w/(h*h*0.0001));
+      setBf((1.2*val) + (0.23*age) - (gen === "1" ? 16.2 : 5.4));
+      gen_factor = (gen === "1" ? 1 : 0.9);
+    }
+
+    if(gen === "1"){
+      if(bf >= 10 && bf <=14)
+        lean_factor = bf_lean.get(0)
+      if(bf >= 15 && bf <=20)
+        lean_factor = bf_lean.get(1)
+      if(bf >= 21 && bf <=28)
+        lean_factor = bf_lean.get(2)
+      if(bf >= 28)
+        lean_factor = bf_lean.get(3)
+    }
+    else if(gen === "2"){
+      if(bf >= 14 && bf <=18)
+        lean_factor = bf_lean.get(0)
+      if(bf >= 19 && bf <=28)
+        lean_factor = bf_lean.get(1)
+      if(bf >= 29 && bf <=38)
+        lean_factor = bf_lean.get(2)
+      if(bf >= 38)
+        lean_factor = bf_lean.get(3)
+    }
+    
+    BMR = w*gen_factor*24*lean_factor;
+    
+    if(activity === "1"){
+      cal_per_day = BMR*1.4
+      document.getElementById("res").innerHTML = cal_per_day;
+
+    }
+    else if(activity === "2"){
+      cal_per_day = BMR*1.65
+      document.getElementById("res").innerHTML = cal_per_day;
+    }
+    else if(activity === "3"){
+      cal_per_day = BMR*1.80
+      document.getElementById("res").innerHTML = cal_per_day;
+    }
+    else if(activity === "4"){
+      cal_per_day = BMR*2.00
+      document.getElementById("res").innerHTML = cal_per_day;
+    }
+    console.log(cal_per_day)
+    setCal(cal_per_day);
+
   }
+  // 25.0 or more overweight, 18.5 to 24.9 - healthy, underweight
+  // if(value > 18.5 && value < 24.9){
+  //   result = "You are healthy"
+  // }   
+  // else if(value > 25.0){
+  //   result = "You are overweight"
+  // }   
+  // else{
+  //   result = "You are underweight"
+  // }   
 
   return (
     <>
 
     <Navbar />
-
-      <div>
-        <h1>this is calorie page - {user}</h1>
-        <div class="mb-3 ">
-          
-          <label htmlFor="exampleformControlTextarea1" className="form-label">Weight in kgs</label>
-          <textarea className="form-control" value={user}  id="exampleFormControlTextarea1" rows="1"></textarea>
-          <label htmlFor="exampleformControlTextarea2" className="form-label">Height in cm</label>
+    <body>
+      <div className="contain">
+        <h1>this is calorie page</h1>
+        <div className="block center">
+          <label id="label1" htmlFor="exampleformControlTextarea1" className="form-label" >Weight (in kgs)</label>
+          <textarea className="form-control"  id="exampleFormControlTextarea1" rows="1"></textarea>
+          <label id="label2" htmlFor="exampleformControlTextarea2" className="form-label">Height (in cm)</label>
           <textarea className="form-control" id="exampleFormControlTextarea2" rows="1"></textarea>
-          <label htmlFor="exampleformControlTextarea3" className="form-label">Calorie Intake of Today</label>
-          <textarea className="form-control" id="exampleFormControlTextarea3" rows="1"></textarea>
-          <button  id="bmi_buttton" type="button" onClick={handleclick} className="btn btn-primary">Calculate BmI</button>
+          <label id="label7" htmlFor="exampleformControlTextarea7" className="form-label">Age: </label>
+          <textarea className="form-control" id="exampleFormControlTextarea7" rows="1"></textarea>
+          <label id="label8" htmlFor="exampleformControlTextarea8" className="form-label">Body Fat Percentage</label>
+          <textarea className="form-control" value={bf} id="exampleFormControlTextarea8" rows="1"></textarea>
+
+          <label id="label3" htmlFor="exampleformControlTextarea3" className="form-label">Activity:</label>
+          <select id="select-activity" className="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected value="">Open this select Activity of You</option>
+            <option value="1">Sedentary: Little or no exercise</option>
+            <option value="2">Moderate: exercise 4-5 times per week</option>
+            <option value="3">Active: daily exercise or intense exercise 3-4 times per week</option>
+            <option value="4">Very Active: Intense exercise 6-7 times per week</option>
+          </select><br/>
+          <label id="label4" htmlFor="exampleformControlTextarea4" className="form-label">Select Gender:</label>
+          <select id="gender" className="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected value="">Select gender here</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            {/* <option value="3">Other</option> */}
+          </select><br/>
+          <button  id="bmi_buttton" type="button" onClick={handleclick} className="btn btn-primary">Calculate BmI</button><br/><br/>
+          <label id="label5" htmlFor="exampleformControlTextarea5" className="form-label">BMI (Body Mass Index) : </label><br/>
+          <textarea className="form-control" value={val} id="exampleFormControlTextarea3" rows="1"></textarea><br/>
+          {/* <p id="res"></p> */}
+          <label id="label6" htmlFor="exampleformControlTextarea6" className="form-label">Calories Required per Day : </label><br/>
+          <textarea className="form-control" value={cal} id="exampleFormControlTextarea3" rows="1"></textarea><br/>
+          <p id="res"></p>
         </div>
       </div>
+      </body>
     </>
   )
 }

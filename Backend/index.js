@@ -18,6 +18,22 @@ app.post("/insert",async(req,res)=>{
     const password=req.body.password
  const user=new userdetails({username:name,emailId:mail,password:password});
  try{
+
+ await user.save();
+ res.send("inserted data")
+
+
+ console.log(user)
+ }catch(err){
+    console.log(err);
+ }
+});
+
+app.put("/update",async(req,res)=>{
+   const items=req.body
+     
+ try{
+     
  await user.save();
  res.send("inserted data")
 

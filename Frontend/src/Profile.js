@@ -6,6 +6,9 @@ import './Profile.css'
 //Profile page shows user details
 export default function Profile() {
 
+    // const setData = ()=>{
+
+    // }
     return (
         <>
             <Navbar />
@@ -35,7 +38,7 @@ export default function Profile() {
                     <textarea className="form-control" id="exampleFormControlTextarea4" rows="1"></textarea>
                     </div>
                 </div>
-                <button id="update_buttton" type="button" className="btn btn-primary">Update profile</button>
+                <button id="update_buttton" type="button" className="btn btn-primary" >Update profile</button>
 
             </div>
         </>
