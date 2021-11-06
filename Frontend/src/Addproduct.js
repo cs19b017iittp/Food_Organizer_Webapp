@@ -1,6 +1,7 @@
 import React from 'react'
 // Which adds the house hold products to inventory
 export default function Addproduct() {
+
     return (
         <div>
             <h1>This add product page</h1>

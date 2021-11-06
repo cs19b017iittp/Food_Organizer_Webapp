@@ -12,6 +12,7 @@ const details=new mongoose.Schema({
         type:Number,
         required:true,
     },
+
 });
 const User=mongoose.model("details",details)
 module.exports=User
