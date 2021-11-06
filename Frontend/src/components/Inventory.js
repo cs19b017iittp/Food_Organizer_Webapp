@@ -1,11 +1,17 @@
-import React from 'react'
+import React,{Component} from 'react'
 
-export default function Inventory() {
-    return (
-        <div>
-            <input type="file"></input>
-        </div>
-    )
+class Inventry extends Component {
+
+    state = {
+        selectedFile: null,
+    }
+    // onFileSelect = 
+
+    render() { 
+        return <div>
+            <input type="file" onChange={onFileSelect}/>
+        </div>;
+    }
 }
-
-
+ 
+export default Inventry;
