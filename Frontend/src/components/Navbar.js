@@ -3,7 +3,7 @@ import React from 'react'
 export default function Navbar() {
     return (
         <>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
           <div className="container-fluid">
             <a className="navbar-brand" href="./carousel">Navbar</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,6 +14,7 @@ export default function Navbar() {
                 <a className="nav-link active" aria-current="page" href="./home">Home</a>
                 <a className="nav-link" href="./profile">Profile</a>
                 <a className="nav-link" href="./calorie">Calorie</a>
+                <a className="nav-link" href="./inventory">Inventory</a>
                 <a className="nav-link disabled" href="/">Disabled</a>
                 
               </div>
