@@ -9,7 +9,7 @@ class Inventry extends Component {
 
     render() { 
         return <div>
-            <input type="file" onChange={onFileSelect}/>
+            {/* <input type="file" onChange={onFileSelect}/> */}
         </div>;
     }
 }

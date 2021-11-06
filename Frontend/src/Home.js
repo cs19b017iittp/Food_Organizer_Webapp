@@ -24,12 +24,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <BiMenu />
       
-      {/* <i class="bi bi-info-circle-fill"></i> */}
-      {/* <Scrollbars style={{width: "100%", height: "100%"}}> */}
-      
-      {/* <h1>This is home page</h1> */}
       <h1 className="container">
         Add The Products You Buy To The Inventory
       </h1>
