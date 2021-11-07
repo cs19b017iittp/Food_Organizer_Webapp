@@ -2,12 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import loginimg from "../../images/loginimg.jpg"
 import "./style.css";
+
+var x="";
 // login page contains inputs of email and password
 export class LoginPage extends React.Component{
 
     constructor(props){
         super(props);
     }
+    sendData = () => {
+        x = document.getElementById("uname").value
+        console.log(x)
+        localStorage.setItem("userName",x);
+    }
+    
 
     render(){
         return <div className="base-Container">
@@ -19,7 +27,7 @@ export class LoginPage extends React.Component{
                 <div className="form">
                     <div className="form-group">
                         <label htmlFor="Username">Username</label>
-                        <input type="text" name="username" placeholder="username" />
+                        <input id="uname" type="text" name="username" placeholder="username" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
@@ -29,8 +37,7 @@ export class LoginPage extends React.Component{
             </div>
             <div className="footer">
                 {/* <button type="button" className="btn">Login</button> */}
-                <Link to="/main" className="btn btn-primary">LOGIN</Link>
-
+                <Link to="/main" onClick={this.sendData} className="btn btn-primary" >LOGIN</Link>
             </div>
         </div>
     }
