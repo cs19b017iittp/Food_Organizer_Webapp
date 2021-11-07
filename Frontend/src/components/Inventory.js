@@ -1,17 +1,12 @@
 import React,{Component} from 'react'
 
-class Inventry extends Component {
-
-    state = {
-        selectedFile: null,
-    }
-    // onFileSelect = 
+class Inventory extends Component {
 
     render() { 
+        var x = localStorage.getItem("userName")
         return <div>
-            {/* <input type="file" onChange={onFileSelect}/> */}
+            <p id="para">{x}</p>
         </div>;
     }
 }
- 
-export default Inventry;
+export default Inventory;
