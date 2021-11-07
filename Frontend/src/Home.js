@@ -10,7 +10,6 @@ import "./Home.css";
 import "./Boxes.css";
 import Footer from "./components/Footer";
 // import ScrollToTop from "./components/Sidebar/ScrollToTop";
-import { Scrollbars } from 'react-custom-scrollbars';
 import Scrolltop from "./components/Scrolltop";
 import { BiMenu } from "react-icons/bi";
 
