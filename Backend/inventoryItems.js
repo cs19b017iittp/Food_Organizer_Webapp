@@ -12,13 +12,7 @@ const items=new mongoose.Schema({
         type:String,
         required:true,
     },
-    itemImage:{
-        type:Image,
-    },
-    expiryDate:{
-        type:String,
-        required:true,
-    },
+ 
 });
 const item=mongoose.model("inventory",items)
 module.exports=item

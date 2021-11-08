@@ -7,7 +7,9 @@ import axios from 'axios';
 
 export default function SignUp() {
     const addusertodatabase=()=>{
-    axios.post("http://localhost:3001/insert",{username:username,emailId:email,password:password });
+        var x=username
+        localStorage.setItem("userName",x);
+    axios.post("http://localhost:3001/user/insert",{username:username,emailId:email,password:password });
     }
     const [username, setusername] = useState("")
     const [email, setemail] = useState("")
