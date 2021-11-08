@@ -4,7 +4,6 @@ import Home from './Home';
 import Profile from './Profile';
 import Calo from './Calorie';
 import HomePage from './Pages';
-import Login from './components/Login';
 import Main from './components/Main';
 import Carousel from './components/Carousel';
 import SignUp from './components/SignUp';
