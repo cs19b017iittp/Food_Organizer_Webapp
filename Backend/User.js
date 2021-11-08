@@ -13,6 +13,9 @@ const str={
 }
 
 const item=new mongoose.Schema({
+    id:{
+      type:String
+    },
     item_name:reqstring,
     place:reqstring,
 });
