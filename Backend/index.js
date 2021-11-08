@@ -2,7 +2,7 @@ const express =require("express");
 const mongoose =require("mongoose");
 const app=express();
 const cors=require("cors");
-const userdetails=require("./User");
+const userdetails=require("./Models/User");
 app.use(express.json());
 app.use(cors());
 const DB="mongodb+srv://foodorg:foodorg@userdetails.7jjbg.mongodb.net/users?retryWrites=true&w=majority";

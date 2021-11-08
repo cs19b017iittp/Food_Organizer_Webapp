@@ -10,11 +10,8 @@ import "./Home.css";
 import "./Boxes.css";
 import Footer from "./components/Footer";
 // import ScrollToTop from "./components/Sidebar/ScrollToTop";
-// import { Scrollbars } from 'react-custom-scrollbars';
 import Scrolltop from "./components/Scrolltop";
 import { BiMenu } from "react-icons/bi";
-
-
 
 // shows suggestion to add items to inventory
 export default function Home() {
@@ -107,11 +104,6 @@ export default function Home() {
           <div className="boxes1 box_scroll">
             <div className="container">
               <h1 id="Fruits">Fruits</h1>
-              {/* <HomePageContainer>
-          <ImgWrap>
-          <Img src={img} alt={alt}/>
-          </ImgWrap>
-        </HomePageContainer>  */}
             </div>
             <div className="row ">
               <div className="col-lg-2 col-md-4">
@@ -441,8 +433,10 @@ export default function Home() {
             </div>
 
             </div>
-
+          <div className="breakers">
           <Link to="/Fruits" className="bth btn-primary btn_more ">More</Link>
+          </div>
+         
           
           <div data-aos="fade-up" className="boxes1">
             <div className="container">
