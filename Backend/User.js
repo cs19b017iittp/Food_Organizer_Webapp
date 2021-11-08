@@ -5,8 +5,8 @@ const details=new mongoose.Schema({
         required:true,
     },
      emailId: {
-    type:String,
-    required:true,
+        type:String,
+        required:true,
     },
     password:{
         type:Number,
