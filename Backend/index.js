@@ -2,7 +2,7 @@ const express =require("express");
 const mongoose =require("mongoose");
 const app=express();
 const cors=require("cors");
-const userdetails=require("./User");
+const userdetails=require("./Models/User");
 app.use(express.json());
 app.use(cors());
 const DB="mongodb+srv://foodorg:foodorg@userdetails.7jjbg.mongodb.net/users?retryWrites=true&w=majority";
@@ -18,6 +18,22 @@ app.post("/insert",async(req,res)=>{
     const password=req.body.password
  const user=new userdetails({username:name,emailId:mail,password:password});
  try{
+
+ await user.save();
+ res.send("inserted data")
+
+
+ console.log(user)
+ }catch(err){
+    console.log(err);
+ }
+});
+
+app.put("/update",async(req,res)=>{
+   const items=req.body
+     
+ try{
+     
  await user.save();
  res.send("inserted data")
 

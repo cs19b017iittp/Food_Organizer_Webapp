@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "devStart": "nodemon app.js"
+   
+    "frontend": " cd .. && cd frontend && npm start",
+    "dev": "nodemon app.js",
+    "start": "concurrently \"npm run dev\" \"npm run frontend\" "
   },
   "author": "",
   "license": "ISC",
