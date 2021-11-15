@@ -1,6 +1,7 @@
 import React ,{useState} from 'react'
 import Navbar from './components/Navbar'
 import './components/Calorie/Calorie.css'
+import Footer from './components/Footer/Footer';
 
 //calorie page
 export default function Calorie() {
@@ -116,44 +117,71 @@ export default function Calorie() {
     <>
 
     <Navbar />
-    <body>
-      <div className="contain">
-        <h1>this is calorie page</h1>
-        <div className="block center">
-          <label id="label1" htmlFor="exampleformControlTextarea1" className="form-label" >Weight (in kgs)</label>
-          <textarea className="form-control"  id="exampleFormControlTextarea1" rows="1"></textarea>
-          <label id="label2" htmlFor="exampleformControlTextarea2" className="form-label">Height (in cm)</label>
-          <textarea className="form-control" id="exampleFormControlTextarea2" rows="1"></textarea>
-          <label id="label7" htmlFor="exampleformControlTextarea7" className="form-label">Age: </label>
-          <textarea className="form-control" id="exampleFormControlTextarea7" rows="1"></textarea>
-          <label id="label8" htmlFor="exampleformControlTextarea8" className="form-label">Body Fat Percentage</label>
-          <textarea className="form-control" value={bf} id="exampleFormControlTextarea8" rows="1"></textarea>
+    <div className="calorie-page">
+		<h1 className="container">Welcome !</h1>
+		<div className="mb-3 row">
+			<label htmlFor="inputtext" className="col-sm-2 col-form-label">Weight (in kgs)</label>
+			<div className="col-sm-10">
+				<textarea className="form-control"  id="exampleFormControlTextarea1" rows="1"></textarea>
+			</div>
+		</div>
+		<div className="mb-3 row">
+			<label htmlFor="inputtext" className="col-sm-2 col-form-label">Height (in cms)</label>
+			<div className="col-sm-10">
+				<textarea className="form-control" id="exampleFormControlTextarea2" rows="1"></textarea>
+			</div>
+		</div>
+		<div className="mb-3 row">
+			<label htmlFor="inputtext" className="col-sm-2 col-form-label">Age</label>
+			<div className="col-sm-10">
+			<textarea className="form-control" id="exampleFormControlTextarea7" rows="1"></textarea>
+			</div>
+		</div>
+		<div className="mb-3 row">
+			<label htmlFor="inputtext" className="col-sm-2 col-form-label">Body Fat Percentage</label>
+			<div className="col-sm-10">
+			<textarea className="form-control" value={bf} id="exampleFormControlTextarea8" rows="1"></textarea>
+			</div>
+		</div>
+		<div className="mb-3 row">
+			<label htmlFor="inputtext" className="col-sm-2 col-form-label">Activity</label>
+			<div className="col-sm-10">
+				<select id="select-activity" className="form-select form-select-sm" aria-label=".form-select-sm example">
+					<option selected value="">Open this select Activity of You</option>
+					<option value="1">Sedentary: Little or no exercise</option>
+					<option value="2">Moderate: exercise 4-5 times per week</option>
+					<option value="3">Active: daily exercise or intense exercise 3-4 times per week</option>
+					<option value="4">Very Active: Intense exercise 6-7 times per week</option>
+				</select><br/>
+			</div>
+		</div>
+		<div className="mb-3 row">
+			<label htmlFor="inputtext" className="col-sm-2 col-form-label">Gender</label>
+			<div className="col-sm-10">
+				<select id="gender" className="form-select form-select-sm" aria-label=".form-select-sm example">
+					<option selected value="">Select gender here</option>
+					<option value="1">Male</option>
+					<option value="2">Female</option>
+				</select><br/>
+			</div>
+		</div>
+		<button  id="bmi_buttton" type="button" onClick={handleclick} className="btn btn-primary">Calculate BmI</button><br/><br/>
+		<div className="mb-3 row">
+			<label htmlFor="inputtext" className="col-sm-2 col-form-label">BMI (Body Mass Index)</label>
+			<div className="col-sm-10">
+			<textarea className="form-control" value={val} id="exampleFormControlTextarea3" rows="1"></textarea><br/>
+			</div>
+		</div>
+		<div className="mb-3 row">
+			<label htmlFor="inputtext" className="col-sm-2 col-form-label">Calories Required per day</label>
+			<div className="col-sm-10">
+				<textarea className="form-control" value={cal} id="exampleFormControlTextarea3" rows="1"></textarea><br/>
+          		<p id="res"></p>
+			</div>
+		</div>
+    </div>
+	<Footer target="calorie"/>
 
-          <label id="label3" htmlFor="exampleformControlTextarea3" className="form-label">Activity:</label>
-          <select id="select-activity" className="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected value="">Open this select Activity of You</option>
-            <option value="1">Sedentary: Little or no exercise</option>
-            <option value="2">Moderate: exercise 4-5 times per week</option>
-            <option value="3">Active: daily exercise or intense exercise 3-4 times per week</option>
-            <option value="4">Very Active: Intense exercise 6-7 times per week</option>
-          </select><br/>
-          <label id="label4" htmlFor="exampleformControlTextarea4" className="form-label">Select Gender:</label>
-          <select id="gender" className="form-select form-select-sm" aria-label=".form-select-sm example">
-            <option selected value="">Select gender here</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-            {/* <option value="3">Other</option> */}
-          </select><br/>
-          <button  id="bmi_buttton" type="button" onClick={handleclick} className="btn btn-primary">Calculate BmI</button><br/><br/>
-          <label id="label5" htmlFor="exampleformControlTextarea5" className="form-label">BMI (Body Mass Index) : </label><br/>
-          <textarea className="form-control" value={val} id="exampleFormControlTextarea3" rows="1"></textarea><br/>
-          {/* <p id="res"></p> */}
-          <label id="label6" htmlFor="exampleformControlTextarea6" className="form-label">Calories Required per Day : </label><br/>
-          <textarea className="form-control" value={cal} id="exampleFormControlTextarea3" rows="1"></textarea><br/>
-          <p id="res"></p>
-        </div>
-      </div>
-      </body>
     </>
   )
 }
