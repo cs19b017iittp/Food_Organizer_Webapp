@@ -8,7 +8,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "./Home.css";
 import "./Boxes.css";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 // import ScrollToTop from "./components/Sidebar/ScrollToTop";
 import Scrolltop from "./components/Scrolltop";
 import { BiMenu } from "react-icons/bi";
@@ -180,7 +180,7 @@ export default function Home() {
         </div>
       </div>
       {/* <ScrollToTop/> */}
-     <Footer/>
+     <Footer target="home"/>
      {/* </Scrollbars> */}
      <Scrolltop />
     </>

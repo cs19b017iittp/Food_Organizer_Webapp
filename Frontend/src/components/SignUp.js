@@ -2,6 +2,7 @@ import React, { Component, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
 import axios from 'axios';
+import { BtnWrap } from './InfoSection/InfoElements';
 // Signup page
 
 
@@ -33,11 +34,13 @@ export default function SignUp() {
                 <label>Confirm Password</label>
                 <input type="password" required></input>
                 <br />
+                <BtnWrap>
                 <Button to="/main"  onClick={addusertodatabase} primary='true'
                     dark='true'
                     smooth={true} duration={500} spy={true} exact='true' offset={-80}>
                     Enter
                 </Button>
+                </BtnWrap>
                 <Link to="/loginpage">Already a user ?</Link>
             </div>
         </>

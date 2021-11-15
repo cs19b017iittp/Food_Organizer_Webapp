@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar'
 import './Profile.css'
 
@@ -41,6 +42,7 @@ export default function Profile() {
                 <button id="update_buttton" type="button" className="btn btn-primary" >Update profile</button>
 
             </div>
+            <Footer target="Profile"/>
         </>
     )
 }
