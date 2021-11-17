@@ -20,6 +20,7 @@ import Addproduct from "./Addproduct";
 import About from './components/About';
 import Inventory from './components/Inventory';
 import LoginPage from './components/loginPage/loginNew';
+import { SignUpNew } from './components/loginPage/SignUpNew';
 
 
 
