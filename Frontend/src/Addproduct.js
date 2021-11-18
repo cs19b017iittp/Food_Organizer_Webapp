@@ -5,26 +5,22 @@ import "./Boxes.css";
 // import { BtnWrap } from './components/InfoSection/InfoElements'
 // Which adds the house hold products to inventory
 export default function Addproduct() {
-    const [itemname, setitemname] = useState("")
-    const [email, setemail] = useState("")
     const [storage, setstorage] = useState("")
     const additem=()=>{
-        var itemname = document.getElementById("Textarea1").value;
+        var itemname = localStorage.getItem("Name");
         var storage = document.getElementById("place").value;
         var x = localStorage.getItem("userName")
         console.log(x+" "+itemname+" "+storage)
 
 
-        if(itemname === "" | storage === "" ){
-            alert("Please fill all fields")
+        if( storage === "" ){
+            alert("Please fill the storage fields")
             return false;
         }
         else{
-           setemail(x)
-           setitemname(itemname)
            setstorage(storage)
         console.log(x+" "+itemname+" "+storage)
-          axios.post("http://localhost:3001/item/insert",{ItemName:itemname,emailId:email,storageplace:storage})
+          axios.post("http://localhost:3001/item/insert",{Itemname:itemname,emailId:x,storageplace:storage})
 
         }
     }
