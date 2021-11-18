@@ -33,11 +33,11 @@ var x="";
                         <label htmlFor="Username">Username</label>
 
 
-                        <input id="uname" type="text" name="username" placeholder="username" />
+                        <input id="uname" type="text" className="login-input" name="username" placeholder="username" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="password">Password</label>
-                        <input type="text" name="password" placeholder="password" />
+                        <input type="text" name="password" className="login-input" placeholder="password" />
                     </div>
                 </div>
             </div>

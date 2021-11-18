@@ -16,12 +16,14 @@ import Grains from './Grains';
 
 import Addproduct from "./Addproduct";
 import DarkMode from './DarkMode';
-
+import ReactNotification from 'react-notifications-component';
 
 import About from './components/About';
 import Inventory from './components/Inventory';
 import LoginPage from './components/loginPage/loginNew';
-import ReactNotification from 'react-notifications-component';
+
+import { SignUpNew } from './components/loginPage/SignUpNew';
+
 
 
 

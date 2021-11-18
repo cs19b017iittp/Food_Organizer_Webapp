@@ -42,7 +42,7 @@ label {
   width: fit-content;
 }
 
-input {
+.login-input {
   margin-top: 6px;
   min-width: 18em;
   height: 37px;
