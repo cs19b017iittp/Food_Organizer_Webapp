@@ -28,7 +28,7 @@ var x="";
                 <div className="image">
                     <img src={loginimg} alt="image" />
                 </div>
-                <div className="form">
+                <div className="form-login">
                     <div className="form-group">
                         <label htmlFor="Username">Username</label>
 
