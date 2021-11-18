@@ -16,6 +16,9 @@ export default function validate(values) {
     else if(values.phone.length !== 10){
         errors.phone = 'Phone number should be of length 10';
     }
+    if(!values.gender){
+        errors.gender = 'Gender is required';
+    }
     if(!values.password){
         errors.password = 'Password is required';
     }

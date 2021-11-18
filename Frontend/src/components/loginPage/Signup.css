@@ -4,18 +4,17 @@
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 10px;
-  height: 850px;
+  height: 900px;
   display: grid;
 }
 
 .form-content {
   border-radius: 0 10px 10px 0;
   position: relative;
-  /* background: linear-gradient(90deg, rgb(40, 40, 40) 0%, rgb(17, 17, 17) 100%); */
   background: linear-gradient(
     90deg,
-    rgb(255, 125, 39) 0%,
-    rgb(0, 232, 236) 100%
+    rgb(0, 232, 236) 0%,
+    rgb(255, 125, 39) 100%
   );
 }
 
@@ -42,12 +41,13 @@
 }
 
 .form-inputs {
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
   width: 80%;
 }
 
 .form-inputs p {
   font-size: 0.8rem;
+  font-weight: bold;
   margin-top: 0.5rem;
   color: #f00e0e;
 }
@@ -67,6 +67,11 @@
   height: 40px;
   width: 100%;
   border: none;
+}
+
+.form-radio{
+  /* display: flex; */
+  justify-content: space-around;
 }
 
 .form-input::placeholder {
@@ -103,4 +108,5 @@
 .link-login{
   text-decoration: none;
   color: darkolivegreen;
+  padding-top: 10px;
 }
