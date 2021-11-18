@@ -111,9 +111,10 @@ const Search = (props)=> {
                     alt="..."
                   ></img>
                   <br />
-                  <a className="btn btn1" href="/Addproduct" role="button" onClick={()=>{
+                  <a className="btn btn1" href="/Addproduct" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add button"onClick={()=>{
                       localStorage.setItem("Name",item.title);
                       localStorage.setItem("Image",item.img);
+                      localStorage.setItem("Head",props.value);
                   }}>ADD</a>
                   
                 </div>
