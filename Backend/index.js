@@ -6,8 +6,9 @@ app.use(express.json());
 app.use(cors());
 const DB="mongodb+srv://foodorg:foodorg@userdetails.7jjbg.mongodb.net/users?retryWrites=true&w=majority";
 
-app.use("/user/insert",require("./Routes/adduser"))
-app.use("/item/insert",require("./Routes/additems"))
+app.use("/user",require("./Routes/adduser"))
+app.use("/item",require("./Routes/additems"))
+app.use("/userspecific",require("./Routes/readitem"))
 
 mongoose.connect(DB,{
 useNewUrlParser:true,

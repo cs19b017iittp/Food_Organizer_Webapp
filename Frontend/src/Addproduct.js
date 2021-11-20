@@ -1,9 +1,6 @@
-import axios from 'axios';
-import React, { useState } from 'react';
-import ReactNotification from 'react-notifications-component';
-import { store } from 'react-notifications-component';
-import 'react-notifications-component/dist/theme.css';
-import 'animate.css';
+
+import axios from 'axios'
+import React, { useState,useEffect } from 'react'
 import "./Boxes.css";
 //import DatePicker from 'react-date-picker';
 import { MdHeight } from 'react-icons/md';
@@ -15,49 +12,29 @@ import DatePicker from 'react-modern-calendar-datepicker';
 // import { BtnWrap } from './components/InfoSection/InfoElements'
 // Which adds the house hold products to inventory
 export default function Addproduct() {
-    const [itemname, setitemname] = useState("")
-    const [email, setemail] = useState("")
     const [storage, setstorage] = useState("")
-    const [quantity,setQuantity] = useState(0);
-    const [selectedDay, setSelectedDay] = useState(null);
-    //const [startDate, setStartDate] = useState(new Date());
     const additem=()=>{
-        var itemname = document.getElementById("Textarea1").value;
+        var itemname = localStorage.getItem("Name");
         var storage = document.getElementById("place").value;
-        var qty = document.getElementById("Numberarea").value;
-       // var dop = document.getElementById("dateofpurchase").value;
-        var x = localStorage.getItem("userName");
-        console.log(x+" "+itemname+" "+storage+" "+qty);
-      
-  
-        if(itemname === "" | storage === "" | qty===0 ){
-            alert("Please fill all fields")
+
+        var x = localStorage.getItem("userName")
+        console.log(x+" "+itemname+" "+storage)
+
+
+        if( storage === "" ){
+            alert("Please fill the storage fields") 
             return false;
         }
         else{
-           setemail(x)
-           setitemname(itemname)
            setstorage(storage)
-           setQuantity(qty)
-        console.log(x+" "+itemname+" "+storage+" "+qty)
-          axios.post("http://localhost:3001/item/insert",{ItemName:itemname,emailId:email,storageplace:storage,quantity:qty})
+ axios.post("http://localhost:3001/item/insert",{ItemName:itemname,emailId:email,storageplace:storage,quantity:qty})
 
+        console.log(x+" "+itemname+" "+storage)
+          axios.post("http://localhost:3001/item/insert",{Itemname:itemname,emailId:x,storageplace:storage})
+        
         }
 
-        store.addNotification({
-            title: 'Successful',
-            message:qty+' '+localStorage.getItem("Name")+'s added to your inventory',
-            type: 'success',                         // 'default', 'success', 'info', 'warning'
-            container: 'top-right',                // where to position the notifications
-            animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
-            animationOut: ["animated", "fadeOut"], 
-            dismiss: {
-                duration: 2000,
-                showIcon:true
-              },
-              width: 600
-          })
-    }
+     
     return (
         <div>
             <h1>This add product page</h1>
@@ -115,6 +92,7 @@ export default function Addproduct() {
                     <a class="btn btn-success" role="button" onClick={additem}>Add Product</a>
             {/* <button className="btn btn-success"   onClick={additem}>Add product</button><br/> */}
             {/* <p id="result">{item}</p> */}
+            
         </div>
     )
 }

@@ -4,7 +4,7 @@ const userdetails=require("../Models/User")
 
 
 
-router.post("",async(req,res)=>{
+router.post("/insert",async(req,res)=>{
     const name=req.body.username
     const mail=req.body.emailId
     const phoneNum = req.body.phone
