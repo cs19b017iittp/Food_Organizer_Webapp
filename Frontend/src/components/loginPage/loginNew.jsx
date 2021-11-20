@@ -2,7 +2,7 @@ import React ,{useState}from "react";
 import { Link } from "react-router-dom";
 import loginimg from "../../images/loginimg.jpg"
 import "./style.css";
-
+import axios from "axios";
 
 var x="";
 
@@ -16,6 +16,7 @@ var x="";
         x = document.getElementById("uname").value
         console.log(x)
         localStorage.setItem("userName",x);
+      
     }
     
 

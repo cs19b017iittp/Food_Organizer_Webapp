@@ -19,21 +19,18 @@ router.post("/insert", async (req, res) => {
       console.log(err);
    }
 });
+router.get("/read", async (req, res) => {
+   // const mail=req.body.emailId
+   // console.log(mail)
+    inventorydetails.find({},(err,result)=>{
+       if(err)
+       {
+          res.send(err);
+       }
+       res.send(result);
+   
+    }) 
+      
+    });
 
-// router.get("/read", async (req, res) => {
-
-//   inventorydetails.find({$where:{Itemname:}},)
-//    // console.log(req.body)
-//    try {
-
-//       await item.save();
-//       // console.log(req.body)
-//       res.send("inserted data")
-
-
-//       console.log(item)
-//    } catch (err) {
-//       console.log(err);
-//    }
-// });
 module.exports = router

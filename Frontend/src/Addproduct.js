@@ -1,11 +1,12 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import "./Boxes.css";
 // import { Button } from './components/Button'
 // import { BtnWrap } from './components/InfoSection/InfoElements'
 // Which adds the house hold products to inventory
 export default function Addproduct() {
     const [storage, setstorage] = useState("")
+
     const additem=()=>{
         var itemname = localStorage.getItem("Name");
         var storage = document.getElementById("place").value;
@@ -14,13 +15,14 @@ export default function Addproduct() {
 
 
         if( storage === "" ){
-            alert("Please fill the storage fields")
+            alert("Please fill the storage fields") 
             return false;
         }
         else{
            setstorage(storage)
         console.log(x+" "+itemname+" "+storage)
           axios.post("http://localhost:3001/item/insert",{Itemname:itemname,emailId:x,storageplace:storage})
+        
 
         }
     }
@@ -48,6 +50,7 @@ export default function Addproduct() {
                     <a class="btn btn-success" href="/inventory" role="button" onClick={additem}>Add Product</a>
             {/* <button className="btn btn-success"   onClick={additem}>Add product</button><br/> */}
             {/* <p id="result">{item}</p> */}
+            
         </div>
     )
 }
