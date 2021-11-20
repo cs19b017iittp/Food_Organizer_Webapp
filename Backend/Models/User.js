@@ -26,6 +26,10 @@ const details=new mongoose.Schema({
         required:true,
         unique:true,
     },
+    gender:{
+        type:String,
+        required:true,
+    },
     password:reqnumber,
 
 });

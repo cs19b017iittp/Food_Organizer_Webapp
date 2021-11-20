@@ -43,6 +43,12 @@ export default function SignUp() {
                     {errors.phone && <p>{errors.phone}</p>}
                 </div>
                 <div className="form-inputs">
+                    <label className="form-label">Gender</label><br/>
+                    <input id="male" type="radio" value="Male" className="form-radio" name="gender" onChange={handleChange}/> Male&nbsp;&nbsp;&nbsp;
+                    <input id="female" type="radio" value="Female" className="form-radio" name="gender" onChange={handleChange}/> Female
+                    {errors.gender && <p>{errors.gender}</p>}
+                </div>
+                <div className="form-inputs">
                     <label className="form-label">Password</label>
                     <input id="password" type="password" name="password" className="form-input" placeholder="Enter your password" value={values.password} onChange={handleChange}/>
                     {/* <i className="far fa-eye" id="togglePassword" ></i> */}

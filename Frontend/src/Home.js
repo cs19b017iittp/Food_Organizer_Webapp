@@ -32,6 +32,7 @@ export default function Home() {
             <a
               className="list-group-item list-group-item-action"
               href="#Fruits"
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Fruits Section"
             >
               {/* <div className="myDIV"> */}
               Fruits
@@ -42,6 +43,7 @@ export default function Home() {
             <a
               className="list-group-item list-group-item-action list-group-item-primary"
               href="#Vegetables"
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Vegetables Section"
             >
               Vegetables
             </a>
@@ -50,6 +52,7 @@ export default function Home() {
             <a
               className="list-group-item list-group-item-action list-group-item-secondary"
               href="#Milk Products"
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Milk Products Section"
             >
               Milk-Products
             </a>
@@ -58,6 +61,7 @@ export default function Home() {
             <a
               className="list-group-item list-group-item-action list-group-item-success"
               href="#Spices"
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Spices Section"
             >
               Spices
             </a>
@@ -66,6 +70,7 @@ export default function Home() {
             <a
               className="list-group-item list-group-item-action list-group-item-danger"
               href="#Leafy Vegetables"
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Leafy Vegetables Section"
             >
               Leafy-Vegetables
             </a>
@@ -74,12 +79,16 @@ export default function Home() {
             <a
               className="list-group-item list-group-item-action "
               href="#Flours"
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Flours Section"
             >
               Flours
             </a>
           </div>
           <div className="col-lg-2 col-md-4 items_sides">
-            <a className="list-group-item list-group-item-action list-group-item-warning" href="#Dry Fruits">
+            <a className="list-group-item list-group-item-action list-group-item-warning" 
+            href="#Dry Fruits"
+            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dry Fruits Section"
+            >
               Dry Fruits
             </a>
           </div>
@@ -87,6 +96,7 @@ export default function Home() {
             <a
               className="list-group-item list-group-item-action list-group-item-info"
               href="#Grains"
+              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Grains Section"
             >
               Grains
             </a>
