@@ -40,6 +40,7 @@ const [userlist, setuserlist] = useState([])
 const [name, setname] = useState("")
 const [number, setnumber] = useState(0)
 const [address, setaddress] = useState("")
+
 const getdetails=()=>{
     var x=localStorage.getItem("userName")
     axios.post("http://localhost:3001/user/getmailid",{emailId:x});
@@ -96,4 +97,4 @@ const getdetails=()=>{
             
         </>
     )
-}
+    }

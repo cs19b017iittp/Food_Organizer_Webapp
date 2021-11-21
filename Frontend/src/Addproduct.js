@@ -1,15 +1,11 @@
-import axios from 'axios'
-import React, { useState, useEffect } from 'react'
+import axios from 'axios';
+import React, { useState } from 'react';
+import ReactNotification from 'react-notifications-component';
+import { store } from 'react-notifications-component';
+import 'react-notifications-component/dist/theme.css';
+import 'animate.css';
 import "./Boxes.css";
-//import DatePicker from 'react-date-picker';
-// import { MdHeight } from 'react-icons/md';
-//import Datepick from './Datepick';
-// import { utils } from 'react-modern-calendar-datepicker';
-// import 'react-modern-calendar-datepicker/lib/DatePicker.css';
-// import DatePicker from 'react-modern-calendar-datepicker';
-// import { Button } from './components/Button'
-// import { BtnWrap } from './components/InfoSection/InfoElements'
-// Which adds the house hold products to inventory
+
 export default function Addproduct() {
     const [storage, setstorage] = useState("")
     const additem = () => {
@@ -32,7 +28,19 @@ export default function Addproduct() {
             axios.post("http://localhost:3001/item/insert", { Itemname: itemname, emailId: x, storageplace: storage })
 
         }
-
+        store.addNotification({
+            title: 'Successful',
+            message:'hii',
+            type: 'success',                         // 'default', 'success', 'info', 'warning'
+            container: 'top-right',                // where to position the notifications
+            animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+            animationOut: ["animated", "fadeOut"], 
+            dismiss: {
+                duration: 2000,
+                showIcon:true
+              },
+              width: 600
+          })
     }
         return (
             <div>
@@ -88,11 +96,11 @@ export default function Addproduct() {
             </div> */}
 
                 <br /><br />
-                <a class="btn btn-success" href="/inventory" role="button" onClick={additem}>Add Product</a>
+                <a class="btn btn-success" role="button" onClick={additem}>Add Product</a>
                 {/* <button className="btn btn-success"   onClick={additem}>Add product</button><br/> */}
                 {/* <p id="result">{item}</p> */}
 
             </div>
         )
     
-}
+        }
