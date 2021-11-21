@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import food from '../images/food.jpg'
 import Axios from 'axios'
 import "./Inventory.css"
+import { Button } from 'react-scroll';
 var x;
 export default function Inventory() {
     const [foodlist, setfoodlist] = useState([])
@@ -17,7 +18,9 @@ export default function Inventory() {
             setfoodlist(response.data);
         })
     }, [])
-
+const DeleteItem=(id)=>{
+    Axios.delete(`http://localhost:3001/item/delete/${id}`);
+}
     return (
         <div>
             <>
@@ -40,6 +43,8 @@ export default function Inventory() {
                                         {/* <h1> {val.emailId}</h1> */}
                                         <label  className="place" htmlFor="place">Place</label>
                                          <input id="place" type="text" className="place-input" name="Place" value={val.storageplace} />
+                                         {/* <i className="fa fa-trash" onClick={DeleteItem(val._id)}></i> */}
+                                         <button id="update_inventory" type="button" onClick={()=>DeleteItem(val._id)} className="btn btn-primary" >delete</button>
                                         {/* <h1> {val.storageplace}</h1> */}
                                     </diV>
                                     : <></>}
