@@ -8,7 +8,7 @@ const DB="mongodb+srv://foodorg:foodorg@userdetails.7jjbg.mongodb.net/users?retr
 
 app.use("/user",require("./Routes/adduser"))
 app.use("/item",require("./Routes/additems"))
-app.use("/userspecific",require("./Routes/readitem"))
+app.use("/userspecific",require("./Routes/readuser"))
 
 mongoose.connect(DB,{
 useNewUrlParser:true,
