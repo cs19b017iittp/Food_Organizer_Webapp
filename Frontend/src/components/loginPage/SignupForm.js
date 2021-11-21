@@ -39,6 +39,7 @@ const useForm = (validate) => {
         if(Object.keys(errors).length === 0 && isSubmitting)
         {
             // callback()
+            localStorage.setItem("userName",values.email);
             axios.post("http://localhost:3001/user/insert",{username:values.username,emailId:values.email,phone:values.phone,gender:values.gender,password:values.password});
             history.push("/main")
         }
