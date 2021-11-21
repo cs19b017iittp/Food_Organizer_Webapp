@@ -1,8 +1,9 @@
 const express=require("express");
 const router=express.Router();
-const userdetails=require("../Models/User")
+const userdetails=require("../Models/User");
+const { where, $where } = require("../Models/User");
 
-
+var mail
 
 router.post("/insert",async(req,res)=>{
     const name=req.body.username
@@ -22,4 +23,23 @@ router.post("/insert",async(req,res)=>{
     console.log(err);
  }
 });
+
+ router.post("/getmailid",async(req,res)=>{
+    mail=req.body.emailId
+    console.log(mail)
+});
+
+router.get("/read", async (req, res) => {
+// console.log(mail)
+ userdetails.find({},(err,result)=>{
+    if(err)
+    {
+       res.send(err)
+    }
+    res.send(result);
+   //  console.log(result)
+
+ }) 
+   
+ });
 module.exports=router 

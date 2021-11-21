@@ -19,10 +19,9 @@ const details=new mongoose.Schema({
      emailId:{
         type:String,
     required:true,
-    unique:true,
      },
     phone:{
-        type:Number,
+        type:String,
         required:true,
         unique:true,
     },
