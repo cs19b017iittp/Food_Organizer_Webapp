@@ -41,23 +41,7 @@ const [name, setname] = useState("")
 const [number, setnumber] = useState(0)
 const [address, setaddress] = useState("")
 
-// useEffect(()=>{
-//     var x=localStorage.getItem("userName")
-//     axios.post("http://localhost:3001/user/getmailid",{emailId:x});
-//     axios.get("http://localhost:3001/user/read").then((response)=>{
-//         // console.log(response);
-//         setuserlist(response.data);
-//         userlist.map((val, key) => {
-//            if(val.emailId===x)
-//            {
-//              setname(val.username)
-//              setnumber(val.phone)
-            
-//            }    
 
-//         })
-//   })
-// },[])
 const getdetails=()=>{
     var x=localStorage.getItem("userName")
     axios.post("http://localhost:3001/user/getmailid",{emailId:x});
