@@ -1,0 +1,57 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import useForm from "./loginForm";
+import validate from "./validateInfo";
+import "./login.css";
+// Login page
+
+export default function Login() {
+  const { handleChange, values, handleSubmit, errors } = useForm(validate);
+
+  return (
+    <>
+      <div className="form-container">
+        <div className="form-content">
+          <form className="form" onSubmit={handleSubmit} noValidate>
+            <h1>Sign in</h1>
+
+            <div className="form-inputs">
+              <label className="form-label">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                className="form-input"
+                placeholder="Enter your email"
+                value={values.email}
+                onChange={handleChange}
+              />
+              {errors.email && <p>{errors.email}</p>}
+            </div>
+
+            <div className="form-inputs">
+              <label className="form-label">Password</label>
+              <input
+                id="password"
+                type="password"
+                name="password"
+                className="form-input"
+                placeholder="Enter your password"
+                value={values.password}
+                onChange={handleChange}
+              />
+              {/* <i className="far fa-eye" id="togglePassword" ></i> */}
+              {errors.password && <p>{errors.password}</p>}
+            </div>
+            <button className="form-input-btn" type="submit">
+              Sign In
+            </button>
+            <Link to="/signup" className="link-login">
+              Don't have an account??
+            </Link>
+          </form>
+        </div>
+      </div>
+    </>
+  );
+}
