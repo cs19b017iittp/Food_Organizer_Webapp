@@ -12,7 +12,6 @@ const useForm = (validate) => {
   var history = useHistory();
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [userlist, setuserlist] = useState([]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,21 +36,15 @@ const useForm = (validate) => {
         emailId: values.email,
       });
       axios.get("http://localhost:3001/user/read").then((response) => {
-        // setfoodlist(response);
-        console.log(response);
-        setuserlist(response.data);
-        userlist.map((val, key) => {
-          console.log(val.emailId);
-          if (val.emailId === values.email) {
-            console.log(val.password + "  --- " + values.password);
-            if (val.password == values.password) {
-              // window.alert("login sucessful");
-              history.push("/main");
-            } else {
-              window.alert("invalid password");
-            }
+        // console.log(serl/.password + "  --- " + values.password);
+        if (response.data[0].emailId ===values.email) {
+          if (response.data[0].password== values.password) {
+            // window.alert("login sucessful");
+            history.push("/main");
+          } else {
+            window.alert("invalid password");
           }
-        });
+        }
       });
     }
   }, [errors]);
