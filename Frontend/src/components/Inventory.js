@@ -20,6 +20,7 @@ export default function Inventory() {
     }, [])
 const DeleteItem=(id)=>{
     Axios.delete(`http://localhost:3001/item/delete/${id}`);
+    window.location.reload ()
 }
     return (
         <div>
@@ -56,20 +57,3 @@ const DeleteItem=(id)=>{
         </div>
     )
 }
-
-
-/*    const [foodlist,setfoodlist]=useState({Itemname:'',emailId:'',storageplace:''})
-    useEffect(()=>{
-        axios.get("http://localhost:3001/item/read").then((response)=>{
-
-            // setfoodlist(response);
-            console.log(response);
-        })
-    },[]);*/
-
-/* <Navbar/>
-        <div>
-            <p id="para">{x}</p>
-            <img src={food} alt="Items"/>
-        </div>
-        </> */

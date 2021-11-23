@@ -36,8 +36,8 @@ router.post("/getmailid", async (req, res) => {
 });
 
 router.get("/read", async (req, res) => {
-  // console.log(mail)
-  userdetails.find({ mail }, (err, result) => {
+  console.log(mail)
+   userdetails.find({emailId:mail}, (err, result) => {
     if (err) {
       res.send(err);
     }
