@@ -5,6 +5,7 @@ import { store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 import 'animate.css';
 import "./Boxes.css";
+import Navbar from './components/Navbar';
 
 export default function Addproduct() {
     const [storage, setstorage] = useState("")
@@ -28,21 +29,23 @@ export default function Addproduct() {
             axios.post("http://localhost:3001/item/insert", { Itemname: itemname, emailId: x, storageplace: storage })
 
         }
-        store.addNotification({
-            title: 'Successful',
-            message:'hii',
-            type: 'success',                         // 'default', 'success', 'info', 'warning'
-            container: 'top-right',                // where to position the notifications
-            animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
-            animationOut: ["animated", "fadeOut"], 
-            dismiss: {
-                duration: 2000,
-                showIcon:true
-              },
-              width: 600
-          })
+        // store.addNotification({
+        //     title: 'Successful',
+        //     message:'hii',
+        //     type: 'success',                         // 'default', 'success', 'info', 'warning'
+        //     container: 'top-right',                // where to position the notifications
+        //     animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+        //     animationOut: ["animated", "fadeOut"], 
+        //     dismiss: {
+        //         duration: 2000,
+        //         showIcon:true
+        //       },
+        //       width: 600
+        //   })
     }
         return (
+            <>
+            <Navbar/>
             <div>
                 <h1>This add product page</h1>
                 <div className="mb-3 row">
@@ -52,8 +55,8 @@ export default function Addproduct() {
                     </div>
 
                 </div>
-                <div className="container boxes4">
-                    <img src={localStorage.getItem("Image")} />
+                <div className="container boxes5">
+                    <img className="img_addp" src={localStorage.getItem("Image")}/>
                 </div>
                 <label htmlFor="inputtext" className="col-sm-2 col-form-label">Select a place to store</label>
                 <select id="place" className="item-store" required>
@@ -101,6 +104,7 @@ export default function Addproduct() {
                 {/* <p id="result">{item}</p> */}
 
             </div>
+            </>
         )
     
         }
