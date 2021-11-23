@@ -1,62 +1,83 @@
-
-import React, { Component, useState, useEffect } from 'react'
-import Navbar from './Navbar';
-import food from '../images/food.jpg'
-import Axios from 'axios'
-import "./Inventory.css"
-import { Button } from 'react-scroll';
+import React, { Component, useState, useEffect } from "react";
+import Navbar from "./Navbar";
+import food from "../images/food.jpg";
+import Axios from "axios";
+import "./Inventory.css";
+import { Button } from "react-scroll";
 var x;
 export default function Inventory() {
-    const [foodlist, setfoodlist] = useState([])
-    useEffect(() => {
-        x = localStorage.getItem("userName");
-        console.log(x)
-        Axios.get("http://localhost:3001/item/read").then((response) => {
-
-            // setfoodlist(response);
-            console.log(response);
-            setfoodlist(response.data);
-        })
-    }, [])
-const DeleteItem=(id)=>{
+  const [foodlist, setfoodlist] = useState([]);
+  useEffect(() => {
+    x = localStorage.getItem("userName");
+    console.log(x);
+    Axios.get("http://localhost:3001/item/read").then((response) => {
+      // setfoodlist(response);
+      console.log(response);
+      setfoodlist(response.data);
+    });
+  }, []);
+  const DeleteItem = (id) => {
     Axios.delete(`http://localhost:3001/item/delete/${id}`);
-}
-    return (
+    window.location.reload();
+  };
+  return (
+    <div>
+      <>
+        <Navbar />
         <div>
-            <>
-                <Navbar />
-                <div>
-                    <p id="para">{x}</p>
-                    {/* <img src={food} alt="Items" /> */}
-                    <h1>list of items</h1>
+          <p id="para">{x}</p>
+          {/* <img src={food} alt="Items" /> */}
+          <h1>list of items</h1>
 
-                    {foodlist.map((val, key) => {
-
-                        return (
-
-                            <div  key={key}>
-                                {val.emailId === x ?
-                                    <diV className="inventorybox">
-                                          <label className="Name" htmlFor="name">Name</label>
-                                         <input id="name" type="text" className="itemname-input" name="Name" value={val.Itemname} />
-                                        {/* <h1> {val.Itemname}</h1> */}
-                                        {/* <h1> {val.emailId}</h1> */}
-                                        <label  className="place" htmlFor="place">Place</label>
-                                         <input id="place" type="text" className="place-input" name="Place" value={val.storageplace} />
-                                         {/* <i className="fa fa-trash" onClick={DeleteItem(val._id)}></i> */}
-                                         <button id="update_inventory" type="button" onClick={()=>DeleteItem(val._id)} className="btn btn-primary" >delete</button>
-                                        {/* <h1> {val.storageplace}</h1> */}
-                                    </diV>
-                                    : <></>}
-                            </div>)
-
-                    })}
-                </div>
-            </>
+          {foodlist.map((val, key) => {
+            return (
+              <div key={key}>
+                {val.emailId === x ? (
+                  <diV className="inventorybox">
+                    <label className="Name" htmlFor="name">
+                      Name
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      className="itemname-input"
+                      name="Name"
+                      value={val.Itemname}
+                    />
+                    {/* <h1> {val.Itemname}</h1> */}
+                    {/* <h1> {val.emailId}</h1> */}
+                    <label className="place" htmlFor="place">
+                      Place
+                    </label>
+                    <input
+                      id="place"
+                      type="text"
+                      className="place-input"
+                      name="Place"
+                      value={val.storageplace}
+                    />
+                    {/* <i className="fa fa-trash" onClick={DeleteItem(val._id)}></i> */}
+                    <button
+                      id="update_inventory"
+                      type="button"
+                      onClick={() => DeleteItem(val._id)}
+                      className="btn btn-primary"
+                    >
+                      delete
+                    </button>
+                    {/* <h1> {val.storageplace}</h1> */}
+                  </diV>
+                ) : (
+                  <></>
+                )}
+              </div>
+            );
+          })}
         </div>
-    )
+      </>
+    </div>
+  );
 }
-
 
 /*    const [foodlist,setfoodlist]=useState({Itemname:'',emailId:'',storageplace:''})
     useEffect(()=>{

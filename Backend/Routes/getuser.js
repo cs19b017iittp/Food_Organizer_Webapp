@@ -14,7 +14,7 @@ router.post("/signin", async (req, res) => {
     const userLogin = await user.findOne({ email: emailId });
 
     if (!userLogin) {
-      res.json({ error: "user not der " });
+      res.json({ error: "user invalid " });
     } else {
       res.json({ message: "user signin sucessfull" });
     }
