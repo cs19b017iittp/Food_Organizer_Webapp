@@ -1,59 +1,59 @@
-.boxes1{
-    margin: 2px;
-    background-color: orangered;
-    background-image: url("https://www.google.com/search?q=backgrounds+orange&tbm=isch&source=iu&ictx=1&fir=kIy-V0pkReYgWM%252C5v-n85ehnSJKjM%252C_%253BiLPjZAbvWvM2yM%252CUFjHdpAx4hPkDM%252C_%253Bnc50AdOa6jLRZM%252CBHV0p5hEd_eeYM%252C_%253BFKcTTMJN6pouPM%252CUFjHdpAx4hPkDM%252C_%253BenhyY68VxqRgqM%252Clr0XzjlaU87q5M%252C_%253BtFe4Kcmj65kvRM%252CUMjgOgqId4DM-M%252C_%253BvBxn852Zi-TMkM%252CNQuku550LbgjfM%252C_%253BIuVvgfo3YR3XTM%252CBQdgcMNOLVaKbM%252C_%253BOWxt0cp-b9fwFM%252ClZG9Z8gDSQKo9M%252C_%253BZzbHSVWO7wUb9M%252CP8BYEFBs2vzsQM%252C_%253BVB926aXzZoDghM%252C5v-n85ehnSJKjM%252C_%253BPwqxm6VtjsmkNM%252CCDH6ZAJFJ1zWTM%252C_&vet=1&usg=AI4_-kS4HKaa5AbdgUgu00nYxeTgePgCXA&sa=X&ved=2ahUKEwjAx_nGm4b0AhVO4XMBHYg2D5IQ9QF6BAgGEAE#imgrc=OWxt0cp-b9fwFM");
-    overflow: hidden;
-    box-shadow: 0px 12px 18px -6px rgba(0, 0,0, 0.3);
-    border-radius: 10px 10px 10px 10px;
-    overflow-y: scroll;
-    height:400px;
+.boxes1 {
+  margin: 2px;
+  background-color: orangered;
+  background-image: url("https://www.google.com/search?q=backgrounds+orange&tbm=isch&source=iu&ictx=1&fir=kIy-V0pkReYgWM%252C5v-n85ehnSJKjM%252C_%253BiLPjZAbvWvM2yM%252CUFjHdpAx4hPkDM%252C_%253Bnc50AdOa6jLRZM%252CBHV0p5hEd_eeYM%252C_%253BFKcTTMJN6pouPM%252CUFjHdpAx4hPkDM%252C_%253BenhyY68VxqRgqM%252Clr0XzjlaU87q5M%252C_%253BtFe4Kcmj65kvRM%252CUMjgOgqId4DM-M%252C_%253BvBxn852Zi-TMkM%252CNQuku550LbgjfM%252C_%253BIuVvgfo3YR3XTM%252CBQdgcMNOLVaKbM%252C_%253BOWxt0cp-b9fwFM%252ClZG9Z8gDSQKo9M%252C_%253BZzbHSVWO7wUb9M%252CP8BYEFBs2vzsQM%252C_%253BVB926aXzZoDghM%252C5v-n85ehnSJKjM%252C_%253BPwqxm6VtjsmkNM%252CCDH6ZAJFJ1zWTM%252C_&vet=1&usg=AI4_-kS4HKaa5AbdgUgu00nYxeTgePgCXA&sa=X&ved=2ahUKEwjAx_nGm4b0AhVO4XMBHYg2D5IQ9QF6BAgGEAE#imgrc=OWxt0cp-b9fwFM");
+  overflow: hidden;
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 10px 10px;
+  overflow-y: scroll;
+  height: 400px;
 }
 
 .boxes1::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .boxes1 {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-.boxes2{
-    margin: 2px;
-    background-color: rgb(198, 177, 198);
-    overflow: hidden;
-    box-shadow: 0px 12px 18px -6px rgba(0, 0,0, 0.3);
-    border-radius: 10px 10px 10px 10px;
-    overflow-y: scroll;
-    
-    height:220px;
+.boxes2 {
+  margin: 2px;
+  background-color: rgb(167, 11, 167);
+  overflow: hidden;
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 10px 10px;
+  overflow-y: scroll;
+
+  height: 220px;
 }
 
-.boxes3{
-    margin: 2px;
-    background-color: rgb(141, 137, 137);
-    box-shadow: 0px 12px 18px -6px rgba(0, 0,0, 0.3);
-    border-radius: 10px 10px 10px 10px;
-    border-top: rgb(204, 78, 74);
-    border-width: 1px;
-    height:145px;
+.boxes3 {
+  margin: 2px;
+  background-color: rgb(141, 137, 137);
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 10px 10px;
+  border-top: rgb(240, 235, 235);
+  border-width: 1px;
+  height: 145px;
 }
 
-.boxes4{
-    margin: 2px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px 12px 18px -6px rgba(0, 0,0, 0.3);
-    border-radius: 10px 10px 10px 10px;
-    border-top: rgb(204, 78, 74);
-    border-width: 1px;
-    margin-left: 100px;
-    width: 20%;
-    height:145px;
+.boxes4 {
+  margin: 2px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px 10px 10px 10px;
+  border-top: rgb(204, 78, 74);
+  border-width: 1px;
+  margin-left: 100px;
+  width: 20%;
+  height: 145px;
 }
 
-.input_num{
-    border: black;
-    background-color: burlywood;
-    width: 50;
+.input_num {
+  border: black;
+  background-color: burlywood;
+  width: 50;
 }

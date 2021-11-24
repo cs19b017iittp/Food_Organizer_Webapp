@@ -37,8 +37,8 @@ const useForm = (validate) => {
       });
       axios.get("http://localhost:3001/user/read").then((response) => {
         // console.log(serl/.password + "  --- " + values.password);
-        if (response.data[0].emailId ===values.email) {
-          if (response.data[0].password== values.password) {
+        if (response.data[0].emailId === values.email) {
+          if (response.data[0].password == values.password) {
             // window.alert("login sucessful");
             history.push("/main");
           } else {
