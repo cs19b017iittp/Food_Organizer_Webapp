@@ -21,7 +21,7 @@
 
 .boxes2 {
   margin: 2px;
-  background-color: rgb(198, 177, 198);
+  background-color: rgb(167, 11, 167);
   overflow: hidden;
   box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
   border-radius: 10px 10px 10px 10px;
@@ -35,7 +35,7 @@
   background-color: rgb(141, 137, 137);
   box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
   border-radius: 10px 10px 10px 10px;
-  border-top: rgb(204, 78, 74);
+  border-top: rgb(240, 235, 235);
   border-width: 1px;
   height: 145px;
 }

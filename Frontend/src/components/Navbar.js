@@ -3,19 +3,18 @@ import { NavLink } from "react-router-dom";
 import { MenuList } from "./MenuList";
 import DarkMode from "../DarkMode";
 import "./Navbar.css";
-
+import Logout from "./Navbar/Logout";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
   const menuList = MenuList.map(({ url, title }, index) => {
     return (
       <>
-      <li key={index}>
-        <NavLink exact to={url} activeClassName="active">
-          {title}
-        </NavLink>
-      </li>
-      
+        <li key={index}>
+          <NavLink exact to={url} activeClassName="active">
+            {title}
+          </NavLink>
+        </li>
       </>
     );
   });
@@ -29,11 +28,13 @@ const Navbar = () => {
       <div className="logo">
         F<font>O</font>
       </div>
+      <DarkMode />
       <div className="menu-icon" onClick={handleClick}>
         <i className={clicked ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
       <ul className={clicked ? "menu-list" : "menu-list close"}>{menuList}</ul>
-      <DarkMode/>
+
+      <Logout />
     </nav>
   );
 };
@@ -59,7 +60,7 @@ export default Navbar;
 //                 <a className="nav-link" href="./calorie">Calorie</a>
 //                 <a className="nav-link" href="./inventory">Inventory</a>
 //                 <a className="nav-link disabled" href="/">Disabled</a>
-                
+
 //               </div>
 //             </div>
 //           </div>

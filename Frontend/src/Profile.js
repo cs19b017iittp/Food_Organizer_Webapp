@@ -35,25 +35,24 @@ export default function Profile() {
   //    console.log(response);
   //  })
   // },[])
-  const [userlist, setuserlist] = useState([]);
   const [name, setname] = useState("");
   const [number, setnumber] = useState(0);
   const [address, setaddress] = useState("");
-
-  const getdetails = () => {
+var id;
+  useEffect(()=>{
     var x = localStorage.getItem("userName");
     axios.post("http://localhost:3001/user/getmailid", { emailId: x });
     axios.get("http://localhost:3001/user/read").then((response) => {
-      // console.log(response);
-      setuserlist(response.data);
-      userlist.map((val, key) => {
-        if (val.emailId === x) {
-          setname(val.username);
-          setnumber(val.phone);
-        }
-      });
+      // console.log(response.data);
+      id=response.data[0]._id
+          if(response.data[0].emailId===x)
+          {        
+          setname(response.data[0].username);
+          setnumber(response.data[0].phone);
+          }
     });
-  };
+  },[])
+
 
   return (
     <>
@@ -114,7 +113,7 @@ export default function Profile() {
         <button
           id="update_buttton"
           type="button"
-          onClick={getdetails}
+         
           className="btn btn-primary"
         >
           Update profile

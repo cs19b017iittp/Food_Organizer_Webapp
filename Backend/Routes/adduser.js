@@ -6,6 +6,7 @@ const userdetails = require("../Models/User");
 const { where, $where } = require("../Models/User");
 
 var mail;
+
 // adding user from signup
 router.post("/insert", async (req, res) => {
   try {
@@ -15,39 +16,66 @@ router.post("/insert", async (req, res) => {
     const gen = req.body.gender;
     const password = req.body.password;
 
-    var exist = await userdetails.findOne({ emailId: mail });
-    if (exist) {
-      return res.status(400).send("user already exists");
-    }
-    const user = new userdetails({
-      username: name,
-      emailId: mail,
-      phone: phoneNum,
-      gender: gen,
-      password: password,
+    userdetails.find({ emailId: mail }, (err, result) => {
+      if (err) {
+        res.send(err);
+      } else {
+        if (Object.keys(result).length === 0) {
+          const user = new userdetails({
+            username: name,
+            emailId: mail,
+            phone: phoneNum,
+            gender: gen,
+            password: password,
+          });
+          user.save();
+          res.send("Registered sucessfully");
+        } else {
+          res.send("user exists");
+        }
+      }
     });
-    await newUser.save();
-    res.status(200).send("Registered sucessfully");
   } catch (err) {
     console.log(err);
     return res.status().send("Server Error");
   }
 });
 
+//login route
+// router.post("/login", async (req, res) => {
+//   try {
+//     const { emailId, password } = req.body;
+//     userdetails.find({ emailId: mail }, (err, result) => {
+//       if (Object.keys(result).length === 0) {
+//         res.send("user exists");
+//       }
+//       if (result.password !== password) {
+//         res.send("invalid password please check it");
+//       }
+
+//       let payload = result._id;
+
+//       jwt.sign(payload, "jwtSecret", { expiresIn: 36000000 }),
+//         (err, token) => {
+//           if (err) throw err;
+//           return res.json({ token });
+//         };
+//     });
+//   } catch (error) {}
+// });
+
 //getting mail from frontend
 
 router.post("/getmailid", async (req, res) => {
   mail = req.body.emailId;
   console.log(mail);
-  //   console.log(mail);
-  //   res.send(mail);
 });
 
 //reading user specific data
 
 router.get("/read", async (req, res) => {
-  // console.log(mail)
-  userdetails.find({ mail }, (err, result) => {
+  console.log(mail);
+  userdetails.find({ emailId: mail }, (err, result) => {
     if (err) {
       res.send(err);
     }

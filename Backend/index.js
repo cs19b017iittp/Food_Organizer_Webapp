@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
 const app = express();
 const cors = require("cors");
 app.use(express.json());
@@ -9,7 +10,6 @@ const DB =
 
 app.use("/user", require("./Routes/adduser"));
 app.use("/item", require("./Routes/additems"));
-app.use("/login", require("./Routes/getuser"));
 app.use("/userspecific", require("./Routes/readuser"));
 
 mongoose
