@@ -27,7 +27,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content:start;
+  justify-content: start;
   align-items: center;
 }
 
@@ -69,8 +69,8 @@
   border: none;
 }
 
-.form-radio{
-  /* display: flex; */
+.form-radio {
+  /* display: grid;*/
   justify-content: space-around;
 }
 
@@ -105,7 +105,7 @@
   transition: all 0.4s ease-out;
 }
 
-.link-login{
+.link-login {
   text-decoration: none;
   color: darkolivegreen;
   padding-top: 10px;
