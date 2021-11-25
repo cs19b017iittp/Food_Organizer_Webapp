@@ -46,7 +46,7 @@ const useForm = (validate) => {
         .then((Response) => {
           if (Response.data == "user exists") {
             history.push("/loginpage");
-            alert("use forgot password ");
+            alert("Email already exists ");
           } else {
             history.push("/main");
           }
