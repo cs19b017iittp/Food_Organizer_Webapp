@@ -68,13 +68,13 @@ router.post("/insert", async (req, res) => {
 
 router.post("/getmailid", async (req, res) => {
   mail = req.body.emailId;
-  console.log(mail);
+  // console.log(mail);
 });
 
 //reading user specific data
 
 router.get("/read", async (req, res) => {
-  console.log(mail);
+  // console.log(mail);
   userdetails.find({ emailId: mail }, (err, result) => {
     if (err) {
       res.send(err);
@@ -83,5 +83,25 @@ router.get("/read", async (req, res) => {
     //  console.log(result)
   });
 });
+
+// updates the userdetails based on emailid
+router.put("/update", async (req, res) => {
+ 
+    const name = req.body.username;
+    const gen = req.body.gender;
+    const phoneNum = req.body.phone;
+   
+    const id = req.body.id;
+    userdetails.findByIdAndUpdate({_id:id},{ username:name,phone:phoneNum,gender:gen},(err,result)=>{
+      if (err){
+        console.log(err)
+    }
+    else{
+       res.send( result);
+    }
+    })
+});
+
+
 
 module.exports = router;

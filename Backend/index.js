@@ -21,18 +21,6 @@ mongoose
   })
   .catch((err) => console.log(`no connectionn`));
 
-// app.get("/",async(req,res)=>{
-
-//  const user=new userdetails({username:"yethin",emailId:"cs19b026@iittp.ac.in",password:1234567});
-//  try{
-//  await user.save();
-//  res.send("inserted data")
-
-//  console.log(user)
-//  }catch(err){
-//     console.log(err);
-//  }
-// });
 app.listen(3001, () => {
   console.log("server is set");
 });
