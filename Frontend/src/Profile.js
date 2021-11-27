@@ -22,21 +22,10 @@ import Footer from "./components/Footer";
 
 //Profile page shows user details
 export default function Profile() {
-  // const [email, setemail] = useState("")
 
-  // var x = localStorage.getItem("userName");
-  // setemail(x)
-  // console.log(x +"    profile page");
-  //users.find( { emailId: localStorage.getItem("userName") } );
-  // useEffect(()=>{
-  //     var x=localStorage.getItem("userName")
-  //  axios.post("http:/localhost:3001/userspecific/getmailid",{emailId:x});
-  //  axios.get("http:/localhost:3001/userspecific/read").then((response)=>{
-  //    console.log(response);
-  //  })
-  // },[])
   const [name, setname] = useState("");
   const [number, setnumber] = useState(0);
+  const [gender,setgender]=useState("");
   const [address, setaddress] = useState("");
 var id;
   useEffect(()=>{
@@ -44,11 +33,13 @@ var id;
     axios.post("http://localhost:3001/user/getmailid", { emailId: x });
     axios.get("http://localhost:3001/user/read").then((response) => {
       // console.log(response.data);
+      // console.log(response.data)
       id=response.data[0]._id
           if(response.data[0].emailId===x)
           {        
           setname(response.data[0].username);
           setnumber(response.data[0].phone);
+          setgender(response.data[0].gender);
           }
     });
   },[])
@@ -100,28 +91,27 @@ var id;
         </div>
         <div className="mb-3 row">
           <label htmlFor="inputtext" className="col-sm-2 col-form-label">
-            Address
+            Gender
           </label>
           <div className="col-sm-10">
             <textarea
               className="form-control"
               id="exampleFormControlTextarea4"
               rows="1"
+              value={gender}
             ></textarea>
           </div>
         </div>
-        <button
+        <a
           id="update_buttton"
           type="button"
-         
+         href="/updateprofile"
           className="btn btn-primary"
         >
           Update profile
-        </button>
-        {/* <button id="update_buttton" type="button" onClick={setdetails} className="btn btn-primary" >setprofile</button> */}
+        </a>
       </div>
       <Footer target="Profile" />
     </>
   );
 }
-// onClick={getdetails

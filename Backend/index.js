@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+// const jwt = require("jsonwebtoken"ds);
 const app = express();
 const cors = require("cors");
 app.use(express.json());
@@ -9,7 +10,6 @@ const DB =
 
 app.use("/user", require("./Routes/adduser"));
 app.use("/item", require("./Routes/additems"));
-app.use("/login", require("./Routes/getuser"));
 app.use("/userspecific", require("./Routes/readuser"));
 
 mongoose
@@ -20,20 +20,6 @@ mongoose
     console.log("connection succesfull");
   })
   .catch((err) => console.log(`no connectionn`));
-
-// app.get("/",async(req,res)=>{
-
-//  const user=new userdetails({username:"yethin",emailId:"cs19b026@iittp.ac.in",password:1234567});
-//  try{
-//  await user.save();
-//  res.send("inserted data")
-
-//  console.log(user)
-//  }catch(err){
-//     console.log(err);
-//  }
-// });
-
 app.listen(3001, () => {
   console.log("server is set");
 });

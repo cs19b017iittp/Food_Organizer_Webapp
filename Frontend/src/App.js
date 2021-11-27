@@ -21,6 +21,7 @@ import ReactNotification from 'react-notifications-component';
 import About from "./components/About";
 import Inventory from "./components/Inventory";
 import Login from "./components/SignIn/login";
+import Updateprofile from "./Updateprofile";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
       </Switch>
       {/* <Navbar/> */}
       {/* <Switch> */}
+      <Route path="/updateprofile" component={Updateprofile} />
       <Route path="/carousel" component={Carousel} />
       <Route path="/home" component={Home} exact />{" "}
       {/* Directs to   home  page */}
