@@ -1,21 +1,34 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import ReactNotification from 'react-notifications-component';
 import { store } from 'react-notifications-component';
 import 'react-notifications-component/dist/theme.css';
 import 'animate.css';
 import "./Boxes.css";
+import ReactNotification from 'react-notifications-component'
 import Navbar from './components/Navbar';
+import DatePicker from 'react-date-picker';
+
 
 export default function Addproduct() {
     const [storage, setstorage] = useState("")
+    const [quantity,setQuantity] = useState(0);
+    const [date, setDate] = useState(new Date());
+    
+    const onDateChange = (newDate) => {
+        setDate(newDate);
+        console.log(newDate);
+    }
+
     const additem = () => {
         var itemname = localStorage.getItem("Name");
+        var itemtype = localStorage.getItem("Head");
         var storage = document.getElementById("place").value;
-
+        var qty = document.getElementById("Numberarea").value;
+      //  var date = document.getElementById("dateinput");
+        var purdate = date.toString();
         var x = localStorage.getItem("userName")
         console.log(x + " " + itemname + " " + storage)
-
+        console.log(purdate)
 
         if (storage === "") {
             alert("Please fill the storage fields")
@@ -23,34 +36,34 @@ export default function Addproduct() {
         }
         else {
             setstorage(storage)
-            //  axios.post("http://localhost:3001/item/insert",{ItemName:itemname,emailId:email,storageplace:storage,quantity:qty})
+            setQuantity(qty)
 
             console.log(x + " " + itemname + " " + storage)
-            axios.post("http://localhost:3001/item/insert", { Itemname: itemname, emailId: x, storageplace: storage })
+            axios.post("http://localhost:3001/item/insert", { Itemname: itemname, emailId: x, storageplace: storage ,quantity:qty,date:purdate,Itemtype:itemtype })
 
         }
-        // store.addNotification({
-        //     title: 'Successful',
-        //     message:'hii',
-        //     type: 'success',                         // 'default', 'success', 'info', 'warning'
-        //     container: 'top-right',                // where to position the notifications
-        //     animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
-        //     animationOut: ["animated", "fadeOut"], 
-        //     dismiss: {
-        //         duration: 2000,
-        //         showIcon:true
-        //       },
-        //       width: 600
-        //   })
+        store.addNotification({
+            title: 'Successful',
+            message:qty+' '+localStorage.getItem("Name")+'s added to your inventory',
+            type: 'success',                         // 'default', 'success', 'info', 'warning'
+            container: 'top-right',                // where to position the notifications
+            animationIn: ["animated", "fadeIn"],     // animate.css classes that's applied
+            animationOut: ["animated", "fadeOut"], 
+            dismiss: {
+                duration: 2000,
+                showIcon:true
+              },
+              width: 600
+          });
     }
         return (
             <>
             <Navbar/>
-            <div>
+            <div className="addproductcss">
                 <h1>This add product page</h1>
                 <div className="mb-3 row">
-                    <label htmlFor="inputtext" className="col-sm-2 col-form-label" >Item Name</label>
-                    <div className="col-sm-2">
+                    <label htmlFor="inputtext" className="col-sm-4 col-form-label" >Item Name</label>
+                    <div className="col-sm-3">
                         <textarea className="form-control" id="Textarea1" rows="1" value={localStorage.getItem("Name")}></textarea>
                     </div>
 
@@ -58,50 +71,36 @@ export default function Addproduct() {
                 <div className="container boxes5">
                     <img className="img_addp" src={localStorage.getItem("Image")}/>
                 </div>
-                <label htmlFor="inputtext" className="col-sm-2 col-form-label">Select a place to store</label>
+                <label htmlFor="inputtext" className="col-sm-4 col-form-label">Select a place to store</label>
                 <select id="place" className="item-store" required>
                     <option selected value="">select a place</option>
                     <option value="Refrigirator">Refrigirator</option>
                     <option value="Cupboard">Cupboard</option>
                     <option value="other">other</option>
                 </select>
-                {/* <div className="mb-3"> */}
-                {/* <textarea className="form-control" id="Textarea1" rows="1" value={placetostore}></textarea> */}
-                {/* if(head==="1"){
-                    <h6>Recommended Storage : Refrigirator</h6>
-                } */}
 
-                {/* </div> */}
-                {/* <div className="mb-3 row">
-                <label htmlFor="inputtext" className="col-sm-2 col-form-label" >Quantity</label>
+                <div className="mb-3 row">
+                <label htmlFor="inputtext" className="col-sm-4 col-form-label" >Quantity</label>
                 <div className="col-sm-1">
-                <input className="input_num" type="number" id="Numberarea" name="qty" placeholder="0" />
-                    <textarea className="form-control" id="Textarea1" rows="1" value={localStorage.getItem("Name")}></textarea>
+                <input  type="number" id="Numberarea" name="qty" placeholder="0" />
                 </div>
-               
-            </div> */}
-                {/* <div className="mb-3 row">
-
-            <div className="col-lg-2">
-                <h6>Date of Purchase</h6>
+               </div>
+               <div className="mb-3 row">
+               <label htmlFor="inputtext" className="col-sm-4 col-form-label" >Date Of Purchase</label>
+               <div className="col-sm-3">
+               <DatePicker
+                    value={date}
+                    onChange={onDateChange}
+                    id="dateinput"
+                //={date}
+                // selectsStart
+                />
                 </div>
-
-                <div className="col-lg-1">
-                <DatePicker
-                id="dateofpurchase"
-      value={selectedDay}
-      onChange={setSelectedDay}
-      inputPlaceholder="Select a day"
-      shouldHighlightWeekends
-    />
                 </div>
-            
-            </div> */}
-
-                <br /><br />
+        
+                <br/>
                 <a class="btn btn-success" role="button" onClick={additem}>Add Product</a>
-                {/* <button className="btn btn-success"   onClick={additem}>Add product</button><br/> */}
-                {/* <p id="result">{item}</p> */}
+               
 
             </div>
             </>
