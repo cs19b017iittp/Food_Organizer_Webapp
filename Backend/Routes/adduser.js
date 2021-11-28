@@ -1,7 +1,7 @@
 const express = require("express");
 const User = require("../Models/User");
 const router = express.Router();
-const jwt = require("jsonwebtoken");
+// const jwt = require("jsonwebtoken");
 const userdetails = require("../Models/User");
 const { where, $where } = require("../Models/User");
 
@@ -74,7 +74,7 @@ router.post("/getmailid", async (req, res) => {
 //reading user specific data
 
 router.get("/read", async (req, res) => {
-  // console.log(mail);
+  console.log(req.body.userid);
   userdetails.find({ emailId: mail }, (err, result) => {
     if (err) {
       res.send(err);

@@ -7,13 +7,18 @@ import Logout from "./Navbar/Logout";
 
 const Navbar = () => {
   const [clicked, setClicked] = useState(false);
+  const [user,setUser] = useState("");
   const menuList = MenuList.map(({ url, title }, index) => {
     return (
       <>
         <li key={index}>
+          {title !== "Notifications" ?
           <NavLink exact to={url} activeClassName="active">
             {title}
-          </NavLink>
+          </NavLink>:
+          <NavLink exact to={url}activeClassName="active">
+            <i className="fas fa-bell"></i> 
+          </NavLink>} 
         </li>
       </>
     );
