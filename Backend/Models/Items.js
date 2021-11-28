@@ -7,12 +7,21 @@ const items=new mongoose.Schema({
     {
         type:String,
     },
+    Itemtype:{
+         type:Number,
+    },
      emailId:{
         type:String,
      },
      storageplace:{
         type:String,
      },
+     quantity:{
+      type:Number,
+      },
+      date:{
+         type:String,
+      },
 
 });
 const itemlist=mongoose.model("items",items)

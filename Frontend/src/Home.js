@@ -52,7 +52,9 @@ export default function Home() {
             <a
               className="list-group-item list-group-item-action list-group-item-secondary"
               href="#Milk Products"
-              data-bs-toggle="tooltip" data-bs-placement="bottom" title="Milk Products Section"
+              data-bs-toggle="tooltip"
+               data-bs-placement="bottom"
+                title="Milk Products Section"
             >
               Milk-Products
             </a>

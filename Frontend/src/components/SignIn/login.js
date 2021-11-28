@@ -31,6 +31,10 @@ export default function Login() {
 
             <div className="form-inputs">
               <label className="form-label">Password</label>
+              <a className="form-label fp">
+                  forgot password
+                  
+            </a>
               <input
                 id="password"
                 type="password"

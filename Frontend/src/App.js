@@ -16,7 +16,7 @@ import Grains from "./Grains";
 
 import Addproduct from "./Addproduct";
 import DarkMode from "./DarkMode";
-// import ReactNotification from 'react-notifications-component';
+import ReactNotification from 'react-notifications-component';
 
 import About from "./components/About";
 import Inventory from "./components/Inventory";
@@ -27,7 +27,7 @@ import Notifications from "./components/Notifications";
 function App() {
   return (
     <Router>
-      {/* <ReactNotification/> */}
+      <ReactNotification/>
       <Switch>
         <Route path="/" component={HomePage} exact />{" "}
         {/* Directs to  open page of website */}
