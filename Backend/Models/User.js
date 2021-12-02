@@ -29,9 +29,6 @@ const details=new mongoose.Schema({
         required:true,
     },
     password:reqnumber,
-    notifications:{
-        type:Array
-    }
 
 });
 const User=mongoose.model("details",details)

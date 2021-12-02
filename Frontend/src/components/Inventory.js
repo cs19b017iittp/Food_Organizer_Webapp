@@ -35,7 +35,7 @@ export default function Inventory() {
             return (
               <div key={key}>
                 {val.emailId === x ? (
-                  <diV className="inventorybox">
+                  <div className="inventorybox">
                     <label className="Name" htmlFor="name">
                       Name
                     </label>
@@ -68,7 +68,7 @@ export default function Inventory() {
                       delete
                     </button>
                     {/* <h1> {val.storageplace}</h1> */}
-                  </diV>
+                  </div>
                 ) : (
                   <></>
                 )}
