@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "Frontend-install":"npm install --prefix client",
     "Frontend": "cd Frontend && npm start",
     "dev": "nodemon app.js",
     "start": "concurrently \"npm run dev\" \"npm run Frontend\" ",
