@@ -13,6 +13,7 @@ export default function Addproduct() {
     const [storage, setstorage] = useState("")
     const [quantity,setQuantity] = useState(0);
     const [date, setDate] = useState(new Date());
+    // const [imglink, setimglink] = useState("");
     
     const onDateChange = (newDate) => {
         setDate(newDate);
@@ -37,9 +38,9 @@ export default function Addproduct() {
         else {
             setstorage(storage)
             setQuantity(qty)
-
+            // setimglink(localStorage.getItem("Image"))
             console.log(x + " " + itemname + " " + storage)
-            axios.post("http://localhost:3001/item/insert", { Itemname: itemname, emailId: x, storageplace: storage ,quantity:qty,date:purdate,Itemtype:itemtype })
+            axios.post("http://localhost:3001/item/insert", { Itemname: itemname, emailId: x, storageplace: storage ,quantity:qty,date:purdate,Itemtype:itemtype,Img_link: localStorage.getItem("Image") })
 
         }
         store.addNotification({
@@ -59,12 +60,19 @@ export default function Addproduct() {
         return (
             <>
             <Navbar/>
+            <div className="container">
+            <h1>Add Product</h1>
+            </div>
+            
             <div className="addproductcss">
-                <h1>This add product page</h1>
+                <br/>
                 <div className="mb-3 row">
-                    <label htmlFor="inputtext" className="col-sm-4 col-form-label" >Item Name</label>
-                    <div className="col-sm-3">
+                    {/* <label htmlFor="inputtext" className="col-sm-4 col-form-label" >Item Name</label> */}
+                    {/* <div className="col-sm-3">
                         <textarea className="form-control" id="Textarea1" rows="1" value={localStorage.getItem("Name")}></textarea>
+                    </div> */}
+                    <div className="container2">
+                    <h4>{localStorage.getItem("Name")}</h4>
                     </div>
 
                 </div>
@@ -86,7 +94,7 @@ export default function Addproduct() {
                 </div>
                </div>
                <div className="mb-3 row">
-               <label htmlFor="inputtext" className="col-sm-4 col-form-label" >Date Of Purchase</label>
+               <label htmlFor="inputtext" className="col-sm-4 col-form-label" >Expiry Date</label>
                <div className="col-sm-3">
                <DatePicker
                     value={date}
@@ -99,7 +107,7 @@ export default function Addproduct() {
                 </div>
         
                 <br/>
-                <a class="btn btn-success" role="button" onClick={additem}>Add Product</a>
+                <a class="btn btn-success" role="button" href="/Inventory" onClick={additem}>Add Product</a>
                
 
             </div>

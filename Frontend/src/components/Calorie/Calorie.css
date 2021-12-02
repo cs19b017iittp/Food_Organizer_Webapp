@@ -12,11 +12,11 @@
 }
 
 .calorie-page{
-  background-image: url("../../images/calorie.jpg");
+  /* background-image: url("../../images/calorie.jpg"); */
   /* background-color: chartreuse; */
   background-size:100% 100%;
+  margin-left: 10px;
 }
-
 .col-form-label{
   color: black;
 }
