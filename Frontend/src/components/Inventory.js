@@ -59,9 +59,6 @@ export default function Inventory() {
                     </button>
                     {/* <h1> {val.storageplace}</h1> */}
                   </div>
-
-                  
-                  
                 ) : (
                   <></>
                 )}
