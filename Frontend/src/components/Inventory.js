@@ -10,14 +10,14 @@ export default function Inventory() {
   useEffect(() => {
     x = localStorage.getItem("userName");
     // console.log(x);
-    Axios.get("http://localhost:3001/item/read").then((response) => {
+    Axios.get("/item/read").then((response) => {
       // setfoodlist(response);
       console.log(response);
       setfoodlist(response.data);
     });
   }, []);
   const DeleteItem = (id) => {
-    Axios.delete(`http://localhost:3001/item/delete/${id}`);
+    Axios.delete(`/item/delete/${id}`);
 
     window.location.reload();
   };
@@ -30,24 +30,25 @@ export default function Inventory() {
           <p id="para"></p>
           {/* <img src={food} alt="Items" /> */}
           <div className="container">
-          <h1> Your Inventory </h1>
+            <h1> Your Inventory </h1>
           </div>
           {foodlist.map((val, key) => {
             return (
               <div key={key}>
                 {val.emailId === x ? (
-                  
                   <div className="inventorybox">
-                    <img src={val.Img_link} height="150px" width="200px"/>
+                    <img src={val.Img_link} height="150px" width="200px" />
                     <div>
-                        <div className="container">
+                      <div className="container">
                         <h6>{val.quantity}</h6>
-                        </div>
-                        <div className="container">
-                        <h6>{val.Itemname} in {val.storageplace}</h6>
-                        </div>
+                      </div>
+                      <div className="container">
+                        <h6>
+                          {val.Itemname} in {val.storageplace}
+                        </h6>
+                      </div>
                     </div>
-              
+
                     {/* <i className="fa fa-trash" onClick={DeleteItem(val._id)}></i> */}
                     <button
                       id="update_inventory"
@@ -62,9 +63,7 @@ export default function Inventory() {
                 ) : (
                   <></>
                 )}
-              
               </div>
-              
             );
           })}
         </div>

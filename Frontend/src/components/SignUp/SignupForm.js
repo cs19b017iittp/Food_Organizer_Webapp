@@ -36,7 +36,7 @@ const useForm = (validate) => {
       // callback()
       localStorage.setItem("userName", values.email);
       axios
-        .post("http://localhost:3001/user/insert", {
+        .post("/user/insert", {
           username: values.username,
           emailId: values.email,
           phone: values.phone,

@@ -105,11 +105,7 @@ export default function Calorie() {
             Weight (in kgs)
           </label>
           <div className="col-sm-10">
-            <textarea
-              className="form-control"
-              id="ta"
-              rows="1"
-            ></textarea>
+            <textarea className="form-control" id="ta" rows="1"></textarea>
           </div>
         </div>
         <div className="mb-3 row">
@@ -117,11 +113,7 @@ export default function Calorie() {
             Height (in cms)
           </label>
           <div className="col-sm-10">
-            <textarea
-              className="form-control"
-              id="ta"
-              rows="1"
-            ></textarea>
+            <textarea className="form-control" id="ta" rows="1"></textarea>
           </div>
         </div>
         <div className="mb-3 row">
@@ -129,11 +121,7 @@ export default function Calorie() {
             Age
           </label>
           <div className="col-sm-10">
-            <textarea
-              className="form-control"
-              id="ta"
-              rows="1"
-            ></textarea>
+            <textarea className="form-control" id="ta" rows="1"></textarea>
           </div>
         </div>
         <div className="mb-3 row">

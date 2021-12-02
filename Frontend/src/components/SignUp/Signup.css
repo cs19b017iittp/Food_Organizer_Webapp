@@ -4,14 +4,13 @@
   /* box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2); */
   position: relative;
   border-radius: 10px;
-  height: 570px;
+  height: 700px;
   display: grid;
 }
 
-
 .form-container1 {
   margin: 0px auto;
-  margin-left:650px;
+  margin-left: 650px;
   width: 500px;
   /* box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2); */
   position: relative;
@@ -20,7 +19,7 @@
   display: grid;
 }
 
-.bgsignup{
+.bgsignup {
   /* background-color: rgb(149, 231, 66); */
   background-image: url("https://cdn.pixabay.com/photo/2015/11/04/15/11/food-1022674_1280.jpg");
   background-size: cover;
@@ -35,17 +34,16 @@
   ); */
 }
 
-
 .form-content1 {
   border-radius: 0 10px 10px 0;
   position: relative;
-   background: linear-gradient(
+  background: linear-gradient(
     90deg,
     rgb(67, 117, 224) 0%,
     rgb(75, 77, 202) 100%
-  ); 
+  );
 }
-.fo_img{
+.fo_img {
   margin-right: 90%;
 }
 
@@ -144,17 +142,17 @@
   padding-top: 10px;
 }
 
-.logomar{
-  margin-left:425px;
+.logomar {
+  margin-left: 425px;
 }
 
-.signinup1{
-  margin-top:10px;
-  height:30px;
-  width:80px;
+.signinup1 {
+  margin-top: 10px;
+  height: 30px;
+  width: 80px;
   text-align: center;
   font-weight: 800;
-  margin-left:310px;
+  margin-left: 310px;
   background: linear-gradient(
     90deg,
     rgb(3, 140, 219) 0%,
@@ -173,10 +171,10 @@
   transition: all 0.4s ease-out;
 }
 
-.signinup2{
-  margin-top:10px;
-  height:30px;
-  width:80px;
+.signinup2 {
+  margin-top: 10px;
+  height: 30px;
+  width: 80px;
   text-align: center;
   font-weight: 800;
   background: linear-gradient(
@@ -198,13 +196,13 @@
   transition: all 0.4s ease-out;
 }
 
-.signinup12{
-  margin-top:10px;
-  height:30px;
-  width:80px;
+.signinup12 {
+  margin-top: 10px;
+  height: 30px;
+  width: 80px;
   text-align: center;
   font-weight: 800;
-  margin-left:120px;
+  margin-left: 120px;
   background: linear-gradient(
     90deg,
     rgb(3, 140, 219) 0%,
@@ -223,10 +221,10 @@
   transition: all 0.4s ease-out;
 }
 
-.signinup22{
-  margin-top:10px;
-  height:30px;
-  width:80px;
+.signinup22 {
+  margin-top: 10px;
+  height: 30px;
+  width: 80px;
   text-align: center;
   font-weight: 800;
   background: linear-gradient(
@@ -247,4 +245,3 @@
   );
   transition: all 0.4s ease-out;
 }
-
